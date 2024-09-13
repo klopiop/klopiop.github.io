@@ -23,10 +23,10 @@
     <loc>https://blog.mi0034.icu/categories/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.mi0034.icu/archives/</loc>
+    <loc>https://blog.mi0034.icu/page/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.mi0034.icu/page/</loc>
+    <loc>https://blog.mi0034.icu/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.mi0034.icu/tags/css/</loc>
@@ -68,10 +68,10 @@
     <loc>https://blog.mi0034.icu/p/math-typesetting/</loc>
     <lastmod>2019-03-08T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://blog.mi0034.icu/links/</loc>
+    <loc>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</loc>
+  </url><url>
+    <loc>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</loc>
   </url><url>
     <loc>https://blog.mi0034.icu/search/</loc>
-  </url><url>
-    <loc>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</loc>
   </url>
 </urlset>

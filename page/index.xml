@@ -8,28 +8,13 @@
         <language>zh-cn</language>
         <copyright>MII0&#39;s Blog</copyright>
         <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.mi0034.icu/page/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Archives</title>
+        <title>归档</title>
         <link>https://blog.mi0034.icu/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
         <guid>https://blog.mi0034.icu/archives/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>links</title>
-        <link>https://blog.mi0034.icu/links/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.mi0034.icu/links/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Search</title>
-        <link>https://blog.mi0034.icu/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://blog.mi0034.icu/search/</guid>
-        <description></description>
+        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>关于</title>
@@ -39,6 +24,23 @@
         <guid>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
+        </item>
+        <item>
+        <title>友链</title>
+        <link>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
+        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>友链</title>
+        <link>https://blog.mi0034.icu/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.mi0034.icu/search/</guid>
+        <description></description>
         </item>
         
     </channel>
