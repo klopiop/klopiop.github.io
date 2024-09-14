@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>MII0&#39;s Blog</title>
-        <link>https://blog.mi0034.icu/</link>
+        <link>https://mi0034.icu/</link>
         <description>Recent content on MII0&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>MII0&#39;s Blog</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.mi0034.icu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://blog.mi0034.icu/archives/</link>
+        <link>https://mi0034.icu/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/archives/</guid>
+        <guid>https://mi0034.icu/archives/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://blog.mi0034.icu/p/markdown-syntax-guide/</link>
+        <link>https://mi0034.icu/p/markdown-syntax-guide/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/p/markdown-syntax-guide/</guid>
-        <description>&lt;img src="https://blog.mi0034.icu/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+        <guid>https://mi0034.icu/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;div class=&#34;card-container&#34;&gt;
   &lt;a href=&#34;https://example.com&#34; target=&#34;_blank&#34; class=&#34;card-link default-class&#34;&gt;
     &lt;span class=&#34;card-link-text&#34;&gt;
@@ -30,7 +30,7 @@
     &lt;/span&gt;
     
       &lt;span class=&#34;card-link-imageCell&#34;&gt;
-        &lt;img class=&#34;card-link-image&#34; src=&#34;https://blog.mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
+        &lt;img class=&#34;card-link-image&#34; src=&#34;https://mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
       &lt;/span&gt;
     
   &lt;/a&gt;
@@ -40,7 +40,7 @@
     &lt;/span&gt;
     
       &lt;span class=&#34;card-link-imageCell&#34;&gt;
-        &lt;img class=&#34;card-link-image&#34; src=&#34;https://blog.mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
+        &lt;img class=&#34;card-link-image&#34; src=&#34;https://mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
       &lt;/span&gt;
     
   &lt;/a&gt;
@@ -50,7 +50,7 @@
     &lt;/span&gt;
     
       &lt;span class=&#34;card-link-imageCell&#34;&gt;
-        &lt;img class=&#34;card-link-image&#34; src=&#34;https://blog.mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
+        &lt;img class=&#34;card-link-image&#34; src=&#34;https://mi0034.icu/img/favicon.ico&#34; alt=&#34;Card Image&#34;&gt;
       &lt;/span&gt;
     
   &lt;/a&gt;
@@ -281,11 +281,11 @@
         </item>
         <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://blog.mi0034.icu/p/markdown-syntax-guide/</link>
+        <link>https://mi0034.icu/p/markdown-syntax-guide/</link>
         <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/p/markdown-syntax-guide/</guid>
-        <description>&lt;img src="https://blog.mi0034.icu/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
+        <guid>https://mi0034.icu/p/markdown-syntax-guide/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg" alt="Featured image of post Markdown Syntax Guide" /&gt;&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;Headings
 &lt;/h2&gt;&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;
 &lt;h1 id=&#34;h1&#34;&gt;H1
@@ -511,29 +511,29 @@
         </item>
         <item>
         <title>关于</title>
-        <link>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>友链</title>
-        <link>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
+        <link>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
+        <guid>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
         <description>&lt;p&gt;🤠 If you want to call for your friendly link, you can comment under any article, or submit a commit in the blog project&lt;/p&gt;
 &lt;p&gt;👾 如果你想要呼唤您的友情链接，可以在任意文章下评论，或者在博客的项目中提交commit&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>友链</title>
-        <link>https://blog.mi0034.icu/search/</link>
+        <link>https://mi0034.icu/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/search/</guid>
+        <guid>https://mi0034.icu/search/</guid>
         <description></description>
         </item>
         

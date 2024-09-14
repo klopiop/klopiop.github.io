@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Test on MII0&#39;s Blog</title>
-        <link>https://blog.mi0034.icu/categories/test/</link>
+        <link>https://mi0034.icu/categories/test/</link>
         <description>Recent content in Test on MII0&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>MII0&#39;s Blog</copyright><atom:link href="https://blog.mi0034.icu/categories/test/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>MII0&#39;s Blog</copyright><atom:link href="https://mi0034.icu/categories/test/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

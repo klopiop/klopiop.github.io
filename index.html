@@ -5,15 +5,15 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="MII0's 的小破站">
 <title>MII0&#39;s Blog</title>
 
-<link rel='canonical' href='https://blog.mi0034.icu/'>
+<link rel='canonical' href='https://mi0034.icu/'>
 
 <link rel="stylesheet" href="/scss/style.min.49ffd5eb78523c7c5d75df045963dcc077ccd6d25a6aa94b4a77b6e0ac2e8f98.css"><meta property='og:title' content="MII0's Blog">
 <meta property='og:description' content="MII0's 的小破站">
-<meta property='og:url' content='https://blog.mi0034.icu/'>
+<meta property='og:url' content='https://mi0034.icu/'>
 <meta property='og:site_name' content='MII0&#39;s Blog'>
 <meta property='og:type' content='website'><meta property='og:updated_time' content=' 2019-05-28T00:00:00&#43;00:00 '/>
 <meta name="twitter:title" content="MII0's Blog">
-<meta name="twitter:description" content="MII0's 的小破站"><link rel="alternate" type="application/rss&#43;xml" href="https://blog.mi0034.icu/index.xml">
+<meta name="twitter:description" content="MII0's 的小破站"><link rel="alternate" type="application/rss&#43;xml" href="https://mi0034.icu/index.xml">
     <link rel="shortcut icon" href="/img/favicon.ico" />
 
     </head>
@@ -361,10 +361,20 @@
   
 <div class="announcement-bar">
     <div class="announcement-text-wrapper">
-      <div class="announcement-text">📣️ BLOG地址实时更新公告：https://mi0034.icu 🎉</div>
+      <div class="announcement-text">📣️ BLOG地址实时更新公告：https://mi0034.icu  🎉</div>
     </div>
     <button class="announcement-close">❌</button>
   </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var closeButton = document.querySelector('.announcement-close');
+      closeButton.addEventListener('click', function () {
+        var announcementBar = document.querySelector('.announcement-bar');
+        announcementBar.style.display = 'none';
+      });
+    });
+  </script>
   
   
   

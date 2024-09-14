@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on MII0&#39;s Blog</title>
-        <link>https://blog.mi0034.icu/page/</link>
+        <link>https://mi0034.icu/page/</link>
         <description>Recent content in Pages on MII0&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>MII0&#39;s Blog</copyright>
-        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.mi0034.icu/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>归档</title>
-        <link>https://blog.mi0034.icu/archives/</link>
+        <link>https://mi0034.icu/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/archives/</guid>
+        <guid>https://mi0034.icu/archives/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>关于</title>
-        <link>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>友链</title>
-        <link>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
+        <link>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
+        <guid>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
         <description>&lt;p&gt;🤠 If you want to call for your friendly link, you can comment under any article, or submit a commit in the blog project&lt;/p&gt;
 &lt;p&gt;👾 如果你想要呼唤您的友情链接，可以在任意文章下评论，或者在博客的项目中提交commit&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>友链</title>
-        <link>https://blog.mi0034.icu/search/</link>
+        <link>https://mi0034.icu/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.mi0034.icu/search/</guid>
+        <guid>https://mi0034.icu/search/</guid>
         <description></description>
         </item>
         
