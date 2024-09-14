@@ -6,7 +6,7 @@
 
 <link rel='canonical' href='https://blog.mi0034.icu/p/markdown-syntax-guide/'>
 
-<link rel="stylesheet" href="/scss/style.min.2719bf7698c713ebde68d88c69c103a053cdf2fdbbfba9243cd2db63af6b0187.css"><meta property='og:title' content="Markdown Syntax Guide">
+<link rel="stylesheet" href="/scss/style.min.49ffd5eb78523c7c5d75df045963dcc077ccd6d25a6aa94b4a77b6e0ac2e8f98.css"><meta property='og:title' content="Markdown Syntax Guide">
 <meta property='og:description' content="Sample article showcasing basic Markdown syntax and formatting for HTML elements.">
 <meta property='og:url' content='https://blog.mi0034.icu/p/markdown-syntax-guide/'>
 <meta property='og:site_name' content='MII0&#39;s Blog'>
@@ -44,7 +44,6 @@
 </script>
 <div class="container main-container flex on-phone--column extended">
 
-
         <div id="article-toolbar" style="position: sticky;top: 10px;z-index: 1000;">
             <a href="/" class="back-home">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -57,7 +56,7 @@
                 <span>返回</span>
             </a>
         </div>
-    
+
 
     <aside class="sidebar right-sidebar sticky">
         
@@ -511,6 +510,39 @@
 
     
 
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/markdown-syntax-guide/">
+        
+        
+            <div class="article-image">
+                <img src="/p/markdown-syntax-guide/pawel-czerwinski-8uZPynIu-rQ-unsplash.c514d916917173a48a42e0114b469961_hu7626638945853200361.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Markdown Syntax Guide"
+                        
+                        data-hash="md5-xRTZFpFxc6SKQuARS0aZYQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Markdown Syntax Guide</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
      
     
         
@@ -660,6 +692,88 @@
                 rel="stylesheet" 
                 href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
             >
+
+    
+    <script>
+        function cardLink() {
+          let $cardLinks = document.querySelectorAll('.card-link');
+          if ($cardLinks.length === 0) {
+            return;
+          }
+          
+          let $linkStyle = document.createElement('style');
+          $linkStyle.innerHTML =
+            '.card-link,.card-link:hover{text-decoration:none;border:none!important;color:inherit!important}' +
+            '.card-link{position:relative;display:block;margin:1em auto;width:390px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none}' +
+            '.card-link-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url(/images/card-link-bg.jpg);background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center}' +
+            '.card-link-content{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)}' +
+            '.card-link-text{overflow:hidden}' +
+            '.card-link-title{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a}' +
+            '.card-link-meta{display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap}' +
+            '.card-link-url{display: inline-flex;align-items: center;}' +
+            '.card-link-imageCell{margin-left:8px;border-radius:6px}' +
+            '.card-link-image{display:block;width:60px;height:60px;border-radius:inherit}';
+          document.querySelector('body').appendChild($linkStyle);
+        
+          
+          for (let $cardLink of $cardLinks) {
+            let $title = $cardLink.querySelector('.card-link-title').innerText;
+            let $url = $cardLink.getAttribute('href');
+            let $imgUrl = $cardLink.getAttribute('data-img');
+            let $imageHtml = $imgUrl ? `<span class='card-link-imageCell'><img class='card-link-image' src='${$imgUrl}' alt='icon'></span>` : '';
+        
+            $cardLink.innerHTML = `
+              <span class='card-link-backdrop'></span>
+              <span class='card-link-content'>
+                <span class='card-link-text'>
+                  <span class='card-link-title'>${$title}</span>
+                  <span class='card-link-meta'>
+                    <span class='card-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
+rd-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
 
             </main>
         </div>
