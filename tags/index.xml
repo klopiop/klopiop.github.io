@@ -6,6 +6,31 @@
         <description>Recent content in Tags on MII0&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>MII0&#39;s Blog</copyright><atom:link href="https://mi0034.icu/tags/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>代理</title>
+        <link>https://mi0034.icu/tags/%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/tags/%E4%BB%A3%E7%90%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>端口转发</title>
+        <link>https://mi0034.icu/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>内网穿透</title>
+        <link>https://mi0034.icu/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+        <description></description>
+        </item>
+        
     </channel>
 </rss>

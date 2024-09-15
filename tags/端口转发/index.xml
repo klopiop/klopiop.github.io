@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>端口转发 on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/</link>
+        <description>Recent content in 端口转发 on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>端口转发与代理</title>
+        <link>https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post 端口转发与代理" /&gt;&lt;h1 id=&#34;0x01-什么是内网穿透&#34;&gt;0x01 什么是内网穿透
+&lt;/h1&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;都知道，实际场景的网络环境，分为内网和外网，内网穿透，简单地说就是内网的数据让外网可以获取，可以映射到公共网络上，这样就可以在公共网络上访问内网的数据。&lt;/li&gt;
+&lt;li&gt;像是普通的家庭网络或者企业的内部通信网络，就都属于内网，需要外部人员访问，就需要将内网资源映射到公网上，这就是内网穿透。&lt;/li&gt;
+&lt;li&gt;内网穿透发明初期是为了方便运维人员对内部网络资源进行维护管理，但是这项技术也成为了威胁内网安全的一把利剑，让威胁者可以轻松的窃取、破坏内网数据。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;0x02什么是端口转发&#34;&gt;0x02什么是端口转发
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/d43b0b3076c8b1628c24f55ddf4826e5.jpeg&#34;
+	width=&#34;739&#34;
+	height=&#34;372&#34;
+	srcset=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/d43b0b3076c8b1628c24f55ddf4826e5_hu14150470582747697405.jpeg 480w, https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/d43b0b3076c8b1628c24f55ddf4826e5_hu6775581590202898339.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;476px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 其实这项技术就是字面意思，但是具体哪个端口转发到哪个端口要以应用场景为准&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;已经与内网中的某台终端设备建立了连接&lt;/li&gt;
+&lt;li&gt;确保这台设备可以访问到 taget 靶机&lt;/li&gt;
+&lt;li&gt;将靶机的目标端口映射到我们可以访问的内网终端设备的端口上，实现流量转发&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;0x0201-端口映射&#34;&gt;0x02.01 端口映射
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/c42fb27660e85dfdc51d23977b2e6e1d.jpeg&#34;
+	width=&#34;1725&#34;
+	height=&#34;478&#34;
+	srcset=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/c42fb27660e85dfdc51d23977b2e6e1d_hu9172779778726860547.jpeg 480w, https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/c42fb27660e85dfdc51d23977b2e6e1d_hu16960438969052594107.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;360&#34;
+		data-flex-basis=&#34;866px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 端口映射跟端口转发有些许区别，假设 A 和 B 在不同的内网，各自有自己的内网 IP，但是互相无法直接访问，这时就需要一个中间服务器&lt;/p&gt;
+&lt;h1 id=&#34;0x03-什么是代理技术&#34;&gt;0x03 什么是代理技术
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;| 我们现在一张图中找找灵感
+&lt;img src=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/65676b032dbc5b71cfa44d5565848dfb.jpeg&#34;
+	width=&#34;3508&#34;
+	height=&#34;2480&#34;
+	srcset=&#34;https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/65676b032dbc5b71cfa44d5565848dfb_hu3742596757525909137.jpeg 480w, https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/attachment/65676b032dbc5b71cfa44d5565848dfb_hu10449968104404134506.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;339px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0301-正向代理&#34;&gt;0x03.01 正向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;设备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端A&lt;/li&gt;
+&lt;li&gt;原始服务器B&lt;/li&gt;
+&lt;li&gt;代理服务器C&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;为了从原始服务器取得内容，用户 A 向代理服务器 C 发送一个请求并指定目标(服务器 B)，然后代理服务器 C 向服务器 B 转交请求并将获得的内容返回给客户端。客户端必须要进行一些特别的设置才能使用正向代理。&lt;/p&gt;
+&lt;p&gt;主要应用：VPN 或者 FQ 上网
+&lt;strong&gt;一般用于内网用户访问外网服务，像是防火墙&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-反向代理&#34;&gt;0x03.02 反向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 反向代理正好与正向代理相反，对于客户端而言代理服务器就像是原始服务器，客户端不需要进行任何特别的设置，反向代理对外的表现都是透明的，客户不知道自己访问的是代理服务器，客户端也不需要任何配置就可以访问。&lt;/p&gt;
+&lt;p&gt;客户端向反向代理的命名空间（&lt;code&gt;name-space&lt;/code&gt;）请求，由反向代理判断指向何处（&lt;code&gt;原始服务器&lt;/code&gt;），最后给客户返回结果。&lt;/p&gt;
+&lt;p&gt;主要应用：安全、负载均衡方面的常用配置
+&lt;strong&gt;一般用于 internet 用户访问内网资源时&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0303-透明代理&#34;&gt;0x03.03 透明代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 透明代理的意思是客户端根本不需要知道有代理服务器的存在，它改编你的 request fields（报文），并会传送真实 IP。透明代理实践的例子就是时下很多公司使用的行为管理软件。&lt;/p&gt;
+&lt;p&gt;设备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;客户端&lt;/li&gt;
+&lt;li&gt;透明代理服务器&lt;/li&gt;
+&lt;li&gt;原始服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当客户端向原始服务器请求时，透明代理设备根据自身策略拦截并修改客户端的报文，并作为实际的请求方，向原始服务器发送请求。当接收信息回传，透明代理再根据自身的设置把允许的报文发回至客户端&lt;/p&gt;
+&lt;p&gt;主要应用：防火墙、行为管理软件&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
