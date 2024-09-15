@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>MII0&#39;s Blog</title>
-        <link>https://mi0034.icu/</link>
-        <description>Recent content on MII0&#39;s Blog</description>
+        <title>网络知识 on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/</link>
+        <description>Recent content in 网络知识 on MII0&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>MII0&#39;s Blog</copyright>
-        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>端口转发与代理</title>
         <link>https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/</link>
         <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
@@ -99,42 +99,6 @@
 &lt;p&gt;当客户端向原始服务器请求时，透明代理设备根据自身策略拦截并修改客户端的报文，并作为实际的请求方，向原始服务器发送请求。当接收信息回传，透明代理再根据自身的设置把允许的报文发回至客户端&lt;/p&gt;
 &lt;p&gt;主要应用：防火墙、行为管理软件&lt;/p&gt;
 </description>
-        </item>
-        <item>
-        <title>归档</title>
-        <link>https://mi0034.icu/archives/</link>
-        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
-        
-        <guid>https://mi0034.icu/archives/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>关于</title>
-        <link>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://mi0034.icu/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;This is a test page for i18n support.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>友链</title>
-        <link>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://mi0034.icu/%E5%8F%8B%E9%93%BE/</guid>
-        <description>&lt;p&gt;🤠 If you want to call for your friendly link, you can comment under any article, or submit a commit in the blog project&lt;/p&gt;
-&lt;p&gt;👾 如果你想要呼唤您的友情链接，可以在任意文章下评论，或者在博客的项目中提交commit&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>友链</title>
-        <link>https://mi0034.icu/search/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        
-        <guid>https://mi0034.icu/search/</guid>
-        <description></description>
         </item>
         
     </channel>
