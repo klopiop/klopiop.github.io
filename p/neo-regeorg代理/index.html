@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="神奇小知识👉又来了👇">
+<title>Neo-reGeorg代理</title>
+
+<link rel='canonical' href='https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.2ca1a90fda9b99db3a71c82ff1948360ddacde646ca6e9a94410f64652d84c86.css"><meta property='og:title' content="Neo-reGeorg代理">
+<meta property='og:description' content="神奇小知识👉又来了👇">
+<meta property='og:url' content='https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/'>
+<meta property='og:site_name' content='MII0&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='端口转发' /><meta property='article:tag' content='内网穿透' /><meta property='article:tag' content='代理' /><meta property='article:tag' content='Neo-reGeorg' /><meta property='article:published_time' content='2024-09-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-15T00:00:00&#43;00:00'/><meta property='og:image' content='https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.png' />
+<meta name="twitter:title" content="Neo-reGeorg代理">
+<meta name="twitter:description" content="神奇小知识👉又来了👇"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+        <div id="article-toolbar" style="position: sticky;top: 10px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0x0101-项目介绍">0x01.01 项目介绍</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0201-下载安装">0x02.01 下载安装</a></li>
+    <li><a href="#0x0201a-本地脚本生成">0x02.01.A 本地脚本生成</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/neo-regeorg%E4%BB%A3%E7%90%86/">
+                <img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/cover_hu14536713498574436789.png"
+                        srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/cover_hu14536713498574436789.png 800w, /p/neo-regeorg%E4%BB%A3%E7%90%86/cover_hu17917723914238610841.png 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post Neo-reGeorg代理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="background-color: #2a9d8f; color: #fff;">
+                网络安全
+            </a>
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" >
+                网络知识
+            </a>
+        
+            <a href="/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" >
+                内网穿透
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/neo-regeorg%E4%BB%A3%E7%90%86/">Neo-reGeorg代理</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            神奇小知识👉又来了👇
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-09-15</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="0x01-技术介绍">0x01 技术介绍
+</h1><hr>
+<h2 id="0x0101-项目介绍">0x01.01 项目介绍
+</h2><hr>
+<blockquote>
+<p>[!info] 一般用于 web 渗透环境</p>
+</blockquote>
+<div class="table-wrapper"><table>
+    <tr>
+        <td >
+             <div style="display: flex; align-items: center; width: 100%;">
+               <a href="https://github.com/sensepost/reGeorg" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+                 <img class="vp-card-logo" src="https://avatars.githubusercontent.com/u/1193973?s=48&amp;v=4" loading="lazy" alt="Logo" style="margin-right: 15px;">
+                 <div class="vp-card-content">
+                   <div class="vp-card-title">reGeorg项目地址：</div>
+                   <div class="vp-card-links">https://github.com/sensepost/reGeorg</div>
+                   <div class="vp-card-desc"><b></b></div>
+                 </div>
+               </a>
+             </div>
+             
+             <style>
+               .cards-container {
+                   display: flex;
+                   justify-content: center;  
+                 }
+                 
+                 .vp-card {
+                   margin-left: auto;
+                   margin-right: auto;
+                   min-height: 120px;  
+                   max-height: 120px;  
+                 }
+                 
+               .vp-card {
+                 display: flex;
+                 align-items: center;  
+                 background: #ffffff;  
+                 width: 100%;
+                 max-width: 300px;
+                 border: 1px solid #eaeaea;  
+                 border-radius: 25px;  
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+                 overflow: hidden;
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 font-family: 'Arial', sans-serif;  
+                 position: relative;  
+               }
+               
+               .vp-card:hover {
+                 transform: translateY(-3px);
+                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+               }
+               
+               .vp-card-logo {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;  
+                 object-fit: cover;  
+                 margin-left: 25px
+               }
+               
+               .vp-card-content {
+                 display: flex;
+                 flex-direction: column;
+                 padding: 16px;  
+                 flex-grow: 1;
+                 position: relative;  
+               }
+               
+               .vp-card-content::before {
+                 content: '';
+                 position: absolute;
+                 top: 0;
+                 bottom: 0;
+                 left: 10px;  
+                 border-left: 2px dashed #eaeaea;  
+                 z-index: 1;  
+               }
+               
+               .vp-card-title {
+                 font-size: 2.0rem;  
+                 color: #1a0dab;  
+                 margin-bottom: 8px;  
+                 line-height: 1;  
+                 font-weight: bold;  
+                 background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+                 -webkit-background-clip: text;  
+                 background-clip: text;  
+                 color: transparent;  
+                 transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+               }
+               
+               .vp-card-links {
+                   font-size: 12px;  
+                   color: #5f6368;  
+                   margin-bottom: 8px;  
+                   line-height: 1.4;  
+                   text-decoration: none;  
+                   transition: color 0.3s ease;  
+                   white-space: nowrap;  
+                   overflow: hidden;  
+                   text-overflow: ellipsis;  
+                 }
+               
+               .vp-card-links:hover {
+                 color: #1a0dab;  
+               }
+               
+               .vp-card-desc {
+                 font-size: 1.4rem;  
+                 color: #666;  
+                 line-height: 1.6;  
+               }
+               
+               hr {
+                 border: 0;
+                 height: 1px;
+                 background-color: #eaeaea;  
+                 margin: 14px 0;  
+               }
+               
+               @media (min-width: 600px) {
+                   .vp-card {
+                     flex: 1 1 250px;  
+                   }
+                 }
+                 
+                 @media (max-width: 599px) {
+                   .vp-card {
+                     flex: 1 1 150px;  
+                     max-width: 100%;  
+                   }
+                 }
+               </style>
+
+        </td>
+        <td >
+             <div style="display: flex; align-items: center; width: 100%;">
+               <a href="https://github.com/L-codes/Neo-reGeorg" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+                 <img class="vp-card-logo" src="https://avatars.githubusercontent.com/u/20529064?s=48&amp;v=4" loading="lazy" alt="Logo" style="margin-right: 15px;">
+                 <div class="vp-card-content">
+                   <div class="vp-card-title">suo5下载地址：</div>
+                   <div class="vp-card-links">https://github.com/L-codes/Neo-reGeorg</div>
+                   <div class="vp-card-desc"><b></b></div>
+                 </div>
+               </a>
+             </div>
+             
+             <style>
+               .cards-container {
+                   display: flex;
+                   justify-content: center;  
+                 }
+                 
+                 .vp-card {
+                   margin-left: auto;
+                   margin-right: auto;
+                   min-height: 120px;  
+                   max-height: 120px;  
+                 }
+                 
+               .vp-card {
+                 display: flex;
+                 align-items: center;  
+                 background: #ffffff;  
+                 width: 100%;
+                 max-width: 300px;
+                 border: 1px solid #eaeaea;  
+                 border-radius: 25px;  
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+                 overflow: hidden;
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 font-family: 'Arial', sans-serif;  
+                 position: relative;  
+               }
+               
+               .vp-card:hover {
+                 transform: translateY(-3px);
+                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+               }
+               
+               .vp-card-logo {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;  
+                 object-fit: cover;  
+                 margin-left: 25px
+               }
+               
+               .vp-card-content {
+                 display: flex;
+                 flex-direction: column;
+                 padding: 16px;  
+                 flex-grow: 1;
+                 position: relative;  
+               }
+               
+               .vp-card-content::before {
+                 content: '';
+                 position: absolute;
+                 top: 0;
+                 bottom: 0;
+                 left: 10px;  
+                 border-left: 2px dashed #eaeaea;  
+                 z-index: 1;  
+               }
+               
+               .vp-card-title {
+                 font-size: 2.0rem;  
+                 color: #1a0dab;  
+                 margin-bottom: 8px;  
+                 line-height: 1;  
+                 font-weight: bold;  
+                 background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+                 -webkit-background-clip: text;  
+                 background-clip: text;  
+                 color: transparent;  
+                 transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+               }
+               
+               .vp-card-links {
+                   font-size: 12px;  
+                   color: #5f6368;  
+                   margin-bottom: 8px;  
+                   line-height: 1.4;  
+                   text-decoration: none;  
+                   transition: color 0.3s ease;  
+                   white-space: nowrap;  
+                   overflow: hidden;  
+                   text-overflow: ellipsis;  
+                 }
+               
+               .vp-card-links:hover {
+                 color: #1a0dab;  
+               }
+               
+               .vp-card-desc {
+                 font-size: 1.4rem;  
+                 color: #666;  
+                 line-height: 1.6;  
+               }
+               
+               hr {
+                 border: 0;
+                 height: 1px;
+                 background-color: #eaeaea;  
+                 margin: 14px 0;  
+               }
+               
+               @media (min-width: 600px) {
+                   .vp-card {
+                     flex: 1 1 250px;  
+                   }
+                 }
+                 
+                 @media (max-width: 599px) {
+                   .vp-card {
+                     flex: 1 1 150px;  
+                     max-width: 100%;  
+                   }
+                 }
+               </style>
+
+        </td>
+    </tr>
+</table></div>
+<p>Neo-reGeorg 项目介绍：Neo-reGeorg 是一个寻求积极重构 reGeorg 的项目</p>
+<ul>
+<li>提高可用性，避免特征检测</li>
+<li>提高 tunnel 连接安全性</li>
+<li>提高传输内容保密性</li>
+<li>应对更多的网络环境场景下使用</li>
+</ul>
+<p>ReGeorg 项目介绍：pwn 堡垒 Web 服务器并通过 DMZ 创建 SOCKS 代理。Pivot 和 pwn</p>
+<h1 id="0x02-环境文件准备">0x02 环境&amp;文件准备
+</h1><hr>
+<p>安装环境：Ubuntu Server 24.0 LTS
+Neo-reGeorg 版本：最新</p>
+<h2 id="0x0201-下载安装">0x02.01 下载安装
+</h2><hr>
+<h2 id="0x0201a-本地脚本生成">0x02.01.A 本地脚本生成
+</h2><hr>
+<p>下载
+<img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a.jpeg"
+	width="2560"
+	height="746"
+	srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a_hu9770934340646283773.jpeg 480w, /p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a_hu5612158077054719648.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="343"
+		data-flex-basis="823px"
+	
+></p>
+<p>解压
+<img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c.jpeg"
+	width="1437"
+	height="1104"
+	srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c_hu2838675109723644952.jpeg 480w, /p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c_hu15889809191210008830.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="130"
+		data-flex-basis="312px"
+	
+></p>
+<p>生成脚本
+使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python neoreg.py generate -k password
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec_hu10499243514124317217.jpeg 480w, /p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec_hu8269444896303082091.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>生成的文件
+<img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b.jpeg"
+	width="1437"
+	height="1104"
+	srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b_hu15969131471060692602.jpeg 480w, /p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b_hu13674902945673899886.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="130"
+		data-flex-basis="312px"
+	
+></p>
+<h1 id="0x03-连接">0x03 连接
+</h1><hr>
+<p>| 上传至服务器中，进行连接
+使用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python neoreg.py -k &lt;已经设定的密钥&gt; -u &lt;http://xxx.xxx.xxx/tunnel.aspx&gt; -p &lt;prot&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6.jpeg"
+	width="931"
+	height="512"
+	srcset="/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6_hu14262944102781353064.jpeg 480w, /p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6_hu14008465291412975696.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="436px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">端口转发</a>
+        
+            <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        
+            <a href="/tags/%E4%BB%A3%E7%90%86/">代理</a>
+        
+            <a href="/tags/neo-regeorg/">Neo-ReGeorg</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/ew%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ew%E4%BB%A3%E7%90%86/cover.b6f39c2c041aa06c712c943e1f333e0b_hu7679812124843827805.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post EW代理"
+                        
+                        data-hash="md5-tvOcLAQaoGxxLJQ&#43;HzM&#43;Cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">EW代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        
+        
+            <div class="article-image">
+                <img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.a655ee61e62cc9f7609f340a8db93461_hu5106650224298509466.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FRP内网穿透"
+                        
+                        data-hash="md5-plXuYeYsyfdgnzQKjbk0YQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FRP内网穿透</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nps%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nps%E4%BB%A3%E7%90%86/cover.4acab2c523854794e61723becc0becd3_hu10683080851496780836.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NPS代理"
+                        
+                        data-hash="md5-SsqyxSOFR5TmFyO&#43;zAvs0w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPS代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ssh%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ssh%E9%9A%A7%E9%81%93/cover.d55baa30e02b6d6a37a57d67583ac285_hu9104437600191226121.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SSH隧道"
+                        
+                        data-hash="md5-1VuqMOArbWo3pX1nWDrChQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/suo5%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/suo5%E9%9A%A7%E9%81%93/cover.b787f1861789ad680abb7b4831e61804_hu934676597337776263.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post suo5隧道"
+                        
+                        data-hash="md5-t4fxhheJrWgKu3tIMeYYBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">suo5隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="klopiop/klopiop.github.io"
+    data-repo-id="R_kgDOMxDnIA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMxDnIM4Cib9E"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 MII0&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-packages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M2 13.5v5.5l5 3" /><path d="M7 16.545l5 -3.03" /><path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M12 19l5 3" /><path d="M17 16.5l5 -3" /><path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" /><path d="M7 5.03v5.455" /><path d="M12 8l5 -3" /></svg> INP-xx-001-MII0 <br/>
+        
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+    
+    <script>
+        function cardLink() {
+          let $cardLinks = document.querySelectorAll('.card-link');
+          if ($cardLinks.length === 0) {
+            return;
+          }
+          
+          let $linkStyle = document.createElement('style');
+          $linkStyle.innerHTML =
+            '.card-link,.card-link:hover{text-decoration:none;border:none!important;color:inherit!important}' +
+            '.card-link{position:relative;display:block;margin:1em auto;width:390px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none}' +
+            '.card-link-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url(/images/card-link-bg.jpg);background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center}' +
+            '.card-link-content{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)}' +
+            '.card-link-text{overflow:hidden}' +
+            '.card-link-title{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a}' +
+            '.card-link-meta{display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap}' +
+            '.card-link-url{display: inline-flex;align-items: center;}' +
+            '.card-link-imageCell{margin-left:8px;border-radius:6px}' +
+            '.card-link-image{display:block;width:60px;height:60px;border-radius:inherit}';
+          document.querySelector('body').appendChild($linkStyle);
+        
+          
+          for (let $cardLink of $cardLinks) {
+            let $title = $cardLink.querySelector('.card-link-title').innerText;
+            let $url = $cardLink.getAttribute('href');
+            let $imgUrl = $cardLink.getAttribute('data-img');
+            let $imageHtml = $imgUrl ? `<span class='card-link-imageCell'><img class='card-link-image' src='${$imgUrl}' alt='icon'></span>` : '';
+        
+            $cardLink.innerHTML = `
+              <span class='card-link-backdrop'></span>
+              <span class='card-link-content'>
+                <span class='card-link-text'>
+                  <span class='card-link-title'>${$title}</span>
+                  <span class='card-link-meta'>
+                    <span class='card-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous" defer></script>
+    </body>
+</html>

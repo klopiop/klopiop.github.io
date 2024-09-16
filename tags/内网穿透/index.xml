@@ -7,7 +7,2553 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>MII0&#39;s Blog</copyright>
-        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>EW代理</title>
+        <link>https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post EW代理" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+  &lt;a href=&#34;https://github.com/idlefire/ew#/&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+    &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+    &lt;div class=&#34;vp-card-content&#34;&gt;
+      &lt;div class=&#34;vp-card-title&#34;&gt;EW下载地址：&lt;/div&gt;
+      &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/idlefire/ew#/&lt;/div&gt;
+      &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;内网穿透&lt;/b&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .cards-container {
+      display: flex;
+      justify-content: center;  
+    }
+    
+    .vp-card {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 120px;  
+      max-height: 120px;  
+    }
+    
+  .vp-card {
+    display: flex;
+    align-items: center;  
+    background: #ffffff;  
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #eaeaea;  
+    border-radius: 25px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: &#39;Arial&#39;, sans-serif;  
+    position: relative;  
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .vp-card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-left: 25px
+  }
+  
+  .vp-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;  
+    flex-grow: 1;
+    position: relative;  
+  }
+  
+  .vp-card-content::before {
+    content: &#39;&#39;;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;  
+    border-left: 2px dashed #eaeaea;  
+    z-index: 1;  
+  }
+  
+  .vp-card-title {
+    font-size: 2.0rem;  
+    color: #1a0dab;  
+    margin-bottom: 8px;  
+    line-height: 1;  
+    font-weight: bold;  
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    color: transparent;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+  }
+  
+  .vp-card-links {
+      font-size: 12px;  
+      color: #5f6368;  
+      margin-bottom: 8px;  
+      line-height: 1.4;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+    }
+  
+  .vp-card-links:hover {
+    color: #1a0dab;  
+  }
+  
+  .vp-card-desc {
+    font-size: 1.4rem;  
+    color: #666;  
+    line-height: 1.6;  
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;  
+    margin: 14px 0;  
+  }
+  
+  @media (min-width: 600px) {
+      .vp-card {
+        flex: 1 1 250px;  
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .vp-card {
+        flex: 1 1 150px;  
+        max-width: 100%;  
+      }
+    }
+  &lt;/style&gt;
+
+&lt;p&gt;项目介绍：EarthWorm 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。&lt;/p&gt;
+&lt;h2 id=&#34;0x0102-ew-技术介绍&#34;&gt;0x01.02 EW 技术介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;全称：Earthworm
+实现流程：
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93.jpeg&#34;
+	width=&#34;810&#34;
+	height=&#34;600&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu4471814556839221325.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu17046947134241356879.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;优点：可执行文件，以适用不同的操作系统，Linux、Windows、MacOS、Arm-Linux 均被包括其内，还支持多级级联&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0LTS
+EW 版本： 最新（8 年前了）&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0201a-自动下载-git&#34;&gt;0x02.01.A 自动下载 git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/idlefire/ew.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39.jpeg&#34;
+	width=&#34;1602&#34;
+	height=&#34;198&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu10589173252350944881.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu2888941450667944309.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;809&#34;
+		data-flex-basis=&#34;1941px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入目录：
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd.jpeg&#34;
+	width=&#34;1609&#34;
+	height=&#34;1209&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu6515886124420246988.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu15672659711350708679.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;0x0201b-手动下载&#34;&gt;0x02.01.B 手动下载
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;手动文件下载：
+|选择对应的版本使用
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f.jpeg&#34;
+	width=&#34;739&#34;
+	height=&#34;564&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu13505232627668769119.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu2624512055136412697.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-配置编辑服务运行&#34;&gt;0x03 配置编辑&amp;amp;服务运行
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x-0301-普通网络环境&#34;&gt;0x 03.01 普通网络环境
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有公网：&lt;/strong&gt;
+拓扑：
+攻击机-&amp;raquo;靶机&lt;/p&gt;
+&lt;p&gt;在目标靶机上使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s ssocksd -l &lt;span class=&#34;m&#34;&gt;1022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;演示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f.jpeg&#34;
+	width=&#34;1073&#34;
+	height=&#34;873&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu10788756764759740930.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu6511649281130936512.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;294px&#34;
+	
+&gt;
+使用 proxyfier, 连接成功
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968.jpeg&#34;
+	width=&#34;914&#34;
+	height=&#34;556&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu1056649741964825504.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu13725304950990846142.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;394px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无公网：&lt;/strong&gt;
+拓扑：
+攻击机-&amp;raquo;公网跳板(/)&amp;laquo;-内网靶机 (192.168.0.2)&lt;/p&gt;
+&lt;p&gt;在公网跳板机上使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s rcsocks -l &lt;span class=&#34;m&#34;&gt;1022&lt;/span&gt; -e &lt;span class=&#34;m&#34;&gt;10022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在内网靶机&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s rssocks -d public_ip -e &lt;span class=&#34;m&#34;&gt;10022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此时公网主机通过接受 1080 端口请求，发送给 8888 端口，内网主机接收 8888 端口&lt;/p&gt;
+&lt;p&gt;演示：&lt;/p&gt;
+&lt;p&gt;| 内网主机开启
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu16896199396918979259.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu11404953662209182711.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 公网主机开启
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3.jpeg&#34;
+	width=&#34;977&#34;
+	height=&#34;336&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu5713723057775979420.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu6822426150365664295.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;290&#34;
+		data-flex-basis=&#34;697px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 攻击机测试
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06.jpeg&#34;
+	width=&#34;918&#34;
+	height=&#34;603&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu11003598558608821060.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu6846341995782979870.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe.jpeg&#34;
+	width=&#34;1046&#34;
+	height=&#34;295&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu5187385374854465522.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu7285563567119342730.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;850px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x-0302-二重网络环境&#34;&gt;0x 03.02 二重网络环境
+&lt;/h2&gt;&lt;p&gt;| 搭建方法类同&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>FRP内网穿透</title>
+        <link>https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.png" alt="Featured image of post FRP内网穿透" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;https://github.com/fatedier/frp&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;FRP下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/fatedier/frp&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;快速反向代理&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：快速反向代理，帮助用户将 NAT 或防火墙后面的本地服务器暴露给 Internet&lt;/p&gt;
+&lt;h2 id=&#34;0x0102-frp-隧道技术介绍&#34;&gt;0x01.02 FRP 隧道技术介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议，且支持 P2P 通信&lt;/p&gt;
+&lt;p&gt;在 FRP 中，一个代理对应一个需要公开访问的内网服务。一个客户端可以同时配置多个代理，以满足不同的需求。&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0LTS
+FRP 版本： 最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0201a-自动下载-git&#34;&gt;0x02.01.A 自动下载 git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/fatedier/frp.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed.jpeg&#34;
+	width=&#34;1616&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed_hu8090329514649159794.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed_hu14641504630179656630.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入目录：
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd.jpeg&#34;
+	width=&#34;1607&#34;
+	height=&#34;1202&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd_hu8965502563275225439.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd_hu12249774820000087469.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;0x0201b-手动下载&#34;&gt;0x02.01.B 手动下载
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;手动文件下载：
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb.jpeg&#34;
+	width=&#34;2530&#34;
+	height=&#34;1184&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb_hu17382559121512764302.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb_hu9827935730125883927.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;选择对应版本下载，解压，进入对应目录&lt;/p&gt;
+&lt;p&gt;Wget:
+Linux 下还可以用 wget 程序下载文件
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget https://github.com/fatedier/frp/releases/download/v0.60.0/frp_0.60.0_linux_amd64.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9.jpeg&#34;
+	width=&#34;1611&#34;
+	height=&#34;1199&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9_hu1970666543968698027.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9_hu12161360893280925670.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;之后解压：
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zxvf 对应文件名.tar.gz 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;之后进入对应目录
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;436&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b_hu3809296441771033643.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b_hu18232319635006286247.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;370&#34;
+		data-flex-basis=&#34;888px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-配置编辑服务运行&#34;&gt;0x03 配置编辑&amp;amp;服务运行
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;文件目录结构：
+| 主要就编辑两个配置文件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16.jpeg&#34;
+	width=&#34;1613&#34;
+	height=&#34;1196&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16_hu1290848668554391477.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16_hu1385820365987386357.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0301-服务端一般为内网跳板机或者公网服务器&#34;&gt;0x03.01 服务端（一般为内网跳板机或者公网服务器）
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;运行命令：
+| 旧版配置文件名叫 frps.ini&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 给运行权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x frps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#运行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./frps -c ./frps.toml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置实例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# frps.toml  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;bindPort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7000&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 服务端与客户端通信端口  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;transport.tls.force &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 服务端将只接受 TLS链接  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auth.token &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;public&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 身份验证令牌，frpc要与frps一致  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;1208&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9_hu4257714533849046737.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9_hu4330824900091730428.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-客户端-一般配置在需要穿透的主机上&#34;&gt;0x03.02 客户端 (一般配置在需要穿透的主机上)
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;运行命令：
+| 旧版配置文件名叫 frpc.ini&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 给运行权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod +x frpc
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#运行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./frpc -c ./frpc.toml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置实例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# frpc.toml  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;transport.tls.enable &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 从 v0.50.0版本开始，transport.tls.enable的默认值为 true  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;serverAddr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;x.x.x.x&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;#自己的公网地址&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;serverPort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;7000&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 公网服务端通信端口  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;auth.token &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;public&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 令牌，与公网服务端保持一致  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt;proxies&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;ssh&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tcp&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;localIP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 需要暴露的服务的IP  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;localPort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 将本地22端口的服务暴露在公网的6666端口  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;remotePort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;6666&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# 暴露服务的公网入口  &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[[&lt;/span&gt;proxies&lt;span class=&#34;o&#34;&gt;]]&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;web&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;tcp&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;localIP&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;localPort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nv&#34;&gt;remotePort&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;8888&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;0x04-拓展_二层代理实操&#34;&gt;0x04 拓展_二层代理实操
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0401-环境准备&#34;&gt;0x04.01 环境准备
+&lt;/h2&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip] 内网两台主机需要互通&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实验环境：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;攻击机&lt;/li&gt;
+&lt;li&gt;公网服务器&lt;/li&gt;
+&lt;li&gt;内网靶机一（出网，已攻陷）192.168.31.200&lt;/li&gt;
+&lt;li&gt;内网靶机二（不出网）192.168.31.6&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实验流程：内网靶机二 22端口映射到内网靶机一 2222端口，最后出网到公网服务器 3559 端口，攻击机连接&lt;/p&gt;
+&lt;h2 id=&#34;0x0402-实验过程&#34;&gt;0x04.02 实验过程
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0402a-配置&#34;&gt;0x04.02.A 配置
+&lt;/h3&gt;&lt;p&gt;靶机一配置：
+| 配置客户端连接公网服务器
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7.jpeg&#34;
+	width=&#34;1619&#34;
+	height=&#34;1195&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7_hu14825306123420665060.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7_hu13924638639041465216.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 配置服务端，留给靶机二连接
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef.jpeg&#34;
+	width=&#34;1612&#34;
+	height=&#34;1172&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef_hu17618227990254953307.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef_hu2022464780138505224.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;137&#34;
+		data-flex-basis=&#34;330px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;靶机一配置：
+| 客户端配置
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb.jpeg&#34;
+	width=&#34;1617&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb_hu7386432810571717148.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb_hu9268802561200403804.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;公网服务端配置：将端口在防火墙放开，配置文件添加对应端口&lt;/p&gt;
+&lt;h3 id=&#34;0x0402b-连接&#34;&gt;0x04.02.B 连接
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;| 启动靶机一的客户端,服务端
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28.jpeg&#34;
+	width=&#34;1621&#34;
+	height=&#34;214&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28_hu8069797012060632293.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28_hu6869845524909284441.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;757&#34;
+		data-flex-basis=&#34;1817px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5.jpeg&#34;
+	width=&#34;1238&#34;
+	height=&#34;318&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5_hu11299753884591950655.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5_hu15073755134195090533.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;389&#34;
+		data-flex-basis=&#34;934px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 启动靶机二的客户端
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4.jpeg&#34;
+	width=&#34;1621&#34;
+	height=&#34;368&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4_hu1840285670902660960.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4_hu17330434117846178510.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;440&#34;
+		data-flex-basis=&#34;1057px&#34;
+	
+&gt;
+查看靶机一日志
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81.jpeg&#34;
+	width=&#34;1614&#34;
+	height=&#34;135&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81_hu9325788249849925856.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81_hu17324411660983475349.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1195&#34;
+		data-flex-basis=&#34;2869px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 使用公网地址连接
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6_hu2317533328444787185.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6_hu16892105052428887444.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;连接成功，执行命令&lt;/p&gt;
+&lt;h1 id=&#34;0x05-拓展_二层代理实操_2&#34;&gt;0x05 拓展_二层代理实操_2
+&lt;/h1&gt;&lt;h2 id=&#34;0x0401-环境准备-1&#34;&gt;0x04.01 环境准备
+&lt;/h2&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip] 内网两台主机需要互通&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;0x0401a-实验环境&#34;&gt;0x04.01.A 实验环境
+&lt;/h3&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;攻击机 (kali)&lt;/li&gt;
+&lt;li&gt;公网服务器&lt;/li&gt;
+&lt;li&gt;内网靶机一（出网，已攻陷）192.168.0.2|10.0.0.3&lt;/li&gt;
+&lt;li&gt;内网靶机二（不出网）10.0.0.2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;实验流程：靶机一是双网卡主机联通两个网段，靶机二不出网，并设置有数据库&lt;/p&gt;
+&lt;h3 id=&#34;0x0401b-配置&#34;&gt;0x04.01.B 配置
+&lt;/h3&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip] 此次实验环境使用 docker 配置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Docker：&lt;/strong&gt;
+目录结构：
+project/
+├── docker-compose.yml
+├── Dockerfile.First_layer
+├── Dockerfile.Second_layer
+├── init.sql&lt;/p&gt;
+&lt;p&gt;运行命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 启动!！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 查看状态&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;配置内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# docker-compose.yml &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;version: &lt;span class=&#34;s1&#34;&gt;&amp;#39;3.8&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;services:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  first_layer:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    build: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      context: .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      dockerfile: Dockerfile.first_layer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    container_name: first_layer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tty: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    stdin_open: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    networks:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      external_net:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ipv4_address: 192.168.0.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      internal_net:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        aliases:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          - first_layer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ports:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      - &lt;span class=&#34;s2&#34;&gt;&amp;#34;2222:22&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  second_layer:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    build: 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      context: .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      dockerfile: Dockerfile.second_layer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    container_name: second_layer
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    tty: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    stdin_open: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    networks:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      internal_net:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        ipv4_address: 10.0.0.2
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    environment:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      MYSQL_ROOT_PASSWORD: root@123
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;volumes:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  mysql_data:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;networks:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  external_net:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    driver: bridge
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ipam:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      driver: default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      config:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        - subnet: 192.168.0.0/24
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  internal_net:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    driver: bridge
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    ipam:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      driver: default
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      config:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        - subnet: 10.0.0.0/24
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Dockerfile.first_layer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM ubuntu:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN apt-get update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install -y wget openssh-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN wget https://github.com/fatedier/frp/releases/download/v0.38.0/frp_0.38.0_linux_amd64.tar.gz &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    tar -zxvf frp_0.38.0_linux_amd64.tar.gz &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    mv frp_0.38.0_linux_amd64/frp /usr/local/bin/ &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    rm -rf frp_0.38.0_linux_amd64.tar.gz frp_0.38.0_linux_amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# SSH配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN mkdir /var/run/sshd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;root:root&amp;#39;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; chpasswd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/#PermitRootLogin prohibit-password/PermitRootLogin yes/&amp;#39;&lt;/span&gt; /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# SSH登录修复&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN sed -i &lt;span class=&#34;s1&#34;&gt;&amp;#39;s@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g&amp;#39;&lt;/span&gt; /etc/pam.d/sshd
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EXPOSE &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CMD &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/usr/sbin/sshd&amp;#34;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;#34;-D&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Dockerfile.second_layer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM ubuntu:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN apt-get update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install -y mysql-server wget
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN wget https://github.com/fatedier/frp/releases/download/v0.38.0/frp_0.38.0_linux_amd64.tar.gz &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    tar -zxvf frp_0.38.0_linux_amd64.tar.gz &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    mv frp_0.38.0_linux_amd64/frp /usr/local/bin/ &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    rm -rf frp_0.38.0_linux_amd64.tar.gz frp_0.38.0_linux_amd64
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# MySQL配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ENV &lt;span class=&#34;nv&#34;&gt;MYSQL_ROOT_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;root@123
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;COPY init.sql /docker-entrypoint-initdb.d/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;EXPOSE &lt;span class=&#34;m&#34;&gt;3306&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CMD &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;mysqld&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# init.sql&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CREATE DATABASE IF NOT EXISTS exampledb&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;GRANT ALL PRIVILEGES ON exampledb.* TO &lt;span class=&#34;s1&#34;&gt;&amp;#39;exampleuser&amp;#39;&lt;/span&gt;@&lt;span class=&#34;s1&#34;&gt;&amp;#39;%&amp;#39;&lt;/span&gt; IDENTIFIED BY &lt;span class=&#34;s1&#34;&gt;&amp;#39;examplepassword&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FLUSH PRIVILEGES&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1.jpeg&#34;
+	width=&#34;1853&#34;
+	height=&#34;203&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1_hu8008940952384053939.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1_hu16042325639454203156.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;912&#34;
+		data-flex-basis=&#34;2190px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;frp:&lt;/strong&gt;
+ssh 连接：
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94_hu5081155343398985298.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94_hu10425620147294109536.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;查看网卡信息：
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d_hu13391418708645146337.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d_hu13940860392452240571.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5_hu349334906934803144.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5_hu8433017128249423193.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;
+可互通：
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b.jpeg&#34;
+	width=&#34;1134&#34;
+	height=&#34;415&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b_hu11001135250687986612.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b_hu3071218541932356118.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;655px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;分别配置 frp:
+| 靶机 2 客户端
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946_hu13524057122015464249.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946_hu11771469096471020467.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 靶机 1 客户端/服务端
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10_hu1798310226990057097.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10_hu15759404697047738720.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793_hu9851492831637391192.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793_hu10926267436014805468.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0402-实验过程-1&#34;&gt;0x04.02 实验过程
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0402a-连接数据库&#34;&gt;0x04.02.A 连接数据库
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950.jpeg&#34;
+	width=&#34;1173&#34;
+	height=&#34;1033&#34;
+	srcset=&#34;https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950_hu10803471062423899574.jpeg 480w, https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950_hu10920984181234317751.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;113&#34;
+		data-flex-basis=&#34;272px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Neo-reGeorg代理</title>
+        <link>https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post Neo-reGeorg代理" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!info] 一般用于 web 渗透环境&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td &gt;
+             &lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+               &lt;a href=&#34;https://github.com/sensepost/reGeorg&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+                 &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/1193973?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+                 &lt;div class=&#34;vp-card-content&#34;&gt;
+                   &lt;div class=&#34;vp-card-title&#34;&gt;reGeorg项目地址：&lt;/div&gt;
+                   &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/sensepost/reGeorg&lt;/div&gt;
+                   &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;
+                 &lt;/div&gt;
+               &lt;/a&gt;
+             &lt;/div&gt;
+             
+             &lt;style&gt;
+               .cards-container {
+                   display: flex;
+                   justify-content: center;  
+                 }
+                 
+                 .vp-card {
+                   margin-left: auto;
+                   margin-right: auto;
+                   min-height: 120px;  
+                   max-height: 120px;  
+                 }
+                 
+               .vp-card {
+                 display: flex;
+                 align-items: center;  
+                 background: #ffffff;  
+                 width: 100%;
+                 max-width: 300px;
+                 border: 1px solid #eaeaea;  
+                 border-radius: 25px;  
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+                 overflow: hidden;
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 font-family: &#39;Arial&#39;, sans-serif;  
+                 position: relative;  
+               }
+               
+               .vp-card:hover {
+                 transform: translateY(-3px);
+                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+               }
+               
+               .vp-card-logo {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;  
+                 object-fit: cover;  
+                 margin-left: 25px
+               }
+               
+               .vp-card-content {
+                 display: flex;
+                 flex-direction: column;
+                 padding: 16px;  
+                 flex-grow: 1;
+                 position: relative;  
+               }
+               
+               .vp-card-content::before {
+                 content: &#39;&#39;;
+                 position: absolute;
+                 top: 0;
+                 bottom: 0;
+                 left: 10px;  
+                 border-left: 2px dashed #eaeaea;  
+                 z-index: 1;  
+               }
+               
+               .vp-card-title {
+                 font-size: 2.0rem;  
+                 color: #1a0dab;  
+                 margin-bottom: 8px;  
+                 line-height: 1;  
+                 font-weight: bold;  
+                 background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+                 -webkit-background-clip: text;  
+                 background-clip: text;  
+                 color: transparent;  
+                 transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+               }
+               
+               .vp-card-links {
+                   font-size: 12px;  
+                   color: #5f6368;  
+                   margin-bottom: 8px;  
+                   line-height: 1.4;  
+                   text-decoration: none;  
+                   transition: color 0.3s ease;  
+                   white-space: nowrap;  
+                   overflow: hidden;  
+                   text-overflow: ellipsis;  
+                 }
+               
+               .vp-card-links:hover {
+                 color: #1a0dab;  
+               }
+               
+               .vp-card-desc {
+                 font-size: 1.4rem;  
+                 color: #666;  
+                 line-height: 1.6;  
+               }
+               
+               hr {
+                 border: 0;
+                 height: 1px;
+                 background-color: #eaeaea;  
+                 margin: 14px 0;  
+               }
+               
+               @media (min-width: 600px) {
+                   .vp-card {
+                     flex: 1 1 250px;  
+                   }
+                 }
+                 
+                 @media (max-width: 599px) {
+                   .vp-card {
+                     flex: 1 1 150px;  
+                     max-width: 100%;  
+                   }
+                 }
+               &lt;/style&gt;
+
+        &lt;/td&gt;
+        &lt;td &gt;
+             &lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+               &lt;a href=&#34;https://github.com/L-codes/Neo-reGeorg&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+                 &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/20529064?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+                 &lt;div class=&#34;vp-card-content&#34;&gt;
+                   &lt;div class=&#34;vp-card-title&#34;&gt;suo5下载地址：&lt;/div&gt;
+                   &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/L-codes/Neo-reGeorg&lt;/div&gt;
+                   &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;&lt;/b&gt;&lt;/div&gt;
+                 &lt;/div&gt;
+               &lt;/a&gt;
+             &lt;/div&gt;
+             
+             &lt;style&gt;
+               .cards-container {
+                   display: flex;
+                   justify-content: center;  
+                 }
+                 
+                 .vp-card {
+                   margin-left: auto;
+                   margin-right: auto;
+                   min-height: 120px;  
+                   max-height: 120px;  
+                 }
+                 
+               .vp-card {
+                 display: flex;
+                 align-items: center;  
+                 background: #ffffff;  
+                 width: 100%;
+                 max-width: 300px;
+                 border: 1px solid #eaeaea;  
+                 border-radius: 25px;  
+                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+                 overflow: hidden;
+                 transition: transform 0.3s ease, box-shadow 0.3s ease;
+                 font-family: &#39;Arial&#39;, sans-serif;  
+                 position: relative;  
+               }
+               
+               .vp-card:hover {
+                 transform: translateY(-3px);
+                 box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+               }
+               
+               .vp-card-logo {
+                 width: 50px;
+                 height: 50px;
+                 border-radius: 50%;  
+                 object-fit: cover;  
+                 margin-left: 25px
+               }
+               
+               .vp-card-content {
+                 display: flex;
+                 flex-direction: column;
+                 padding: 16px;  
+                 flex-grow: 1;
+                 position: relative;  
+               }
+               
+               .vp-card-content::before {
+                 content: &#39;&#39;;
+                 position: absolute;
+                 top: 0;
+                 bottom: 0;
+                 left: 10px;  
+                 border-left: 2px dashed #eaeaea;  
+                 z-index: 1;  
+               }
+               
+               .vp-card-title {
+                 font-size: 2.0rem;  
+                 color: #1a0dab;  
+                 margin-bottom: 8px;  
+                 line-height: 1;  
+                 font-weight: bold;  
+                 background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+                 -webkit-background-clip: text;  
+                 background-clip: text;  
+                 color: transparent;  
+                 transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+               }
+               
+               .vp-card-links {
+                   font-size: 12px;  
+                   color: #5f6368;  
+                   margin-bottom: 8px;  
+                   line-height: 1.4;  
+                   text-decoration: none;  
+                   transition: color 0.3s ease;  
+                   white-space: nowrap;  
+                   overflow: hidden;  
+                   text-overflow: ellipsis;  
+                 }
+               
+               .vp-card-links:hover {
+                 color: #1a0dab;  
+               }
+               
+               .vp-card-desc {
+                 font-size: 1.4rem;  
+                 color: #666;  
+                 line-height: 1.6;  
+               }
+               
+               hr {
+                 border: 0;
+                 height: 1px;
+                 background-color: #eaeaea;  
+                 margin: 14px 0;  
+               }
+               
+               @media (min-width: 600px) {
+                   .vp-card {
+                     flex: 1 1 250px;  
+                   }
+                 }
+                 
+                 @media (max-width: 599px) {
+                   .vp-card {
+                     flex: 1 1 150px;  
+                     max-width: 100%;  
+                   }
+                 }
+               &lt;/style&gt;
+
+        &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;Neo-reGeorg 项目介绍：Neo-reGeorg 是一个寻求积极重构 reGeorg 的项目&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提高可用性，避免特征检测&lt;/li&gt;
+&lt;li&gt;提高 tunnel 连接安全性&lt;/li&gt;
+&lt;li&gt;提高传输内容保密性&lt;/li&gt;
+&lt;li&gt;应对更多的网络环境场景下使用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ReGeorg 项目介绍：pwn 堡垒 Web 服务器并通过 DMZ 创建 SOCKS 代理。Pivot 和 pwn&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS
+Neo-reGeorg 版本：最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0201a-本地脚本生成&#34;&gt;0x02.01.A 本地脚本生成
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;下载
+&lt;img src=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;746&#34;
+	srcset=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a_hu9770934340646283773.jpeg 480w, https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/b3385880fb20119ffad8ddd19f18fb2a_hu5612158077054719648.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;343&#34;
+		data-flex-basis=&#34;823px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;解压
+&lt;img src=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c.jpeg&#34;
+	width=&#34;1437&#34;
+	height=&#34;1104&#34;
+	srcset=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c_hu2838675109723644952.jpeg 480w, https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/07c76d25a149c0ea698a83316f1db49c_hu15889809191210008830.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;312px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;生成脚本
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python neoreg.py generate -k password
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec_hu10499243514124317217.jpeg 480w, https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/36ae9cef7e2e78c6e421d3e1bc328fec_hu8269444896303082091.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;生成的文件
+&lt;img src=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b.jpeg&#34;
+	width=&#34;1437&#34;
+	height=&#34;1104&#34;
+	srcset=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b_hu15969131471060692602.jpeg 480w, https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/f584155ac8cd548fd7111ae768bf657b_hu13674902945673899886.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;312px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-连接&#34;&gt;0x03 连接
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;| 上传至服务器中，进行连接
+使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;python neoreg.py -k &amp;lt;已经设定的密钥&amp;gt; -u &amp;lt;http://xxx.xxx.xxx/tunnel.aspx&amp;gt; -p &amp;lt;prot&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6.jpeg&#34;
+	width=&#34;931&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6_hu14262944102781353064.jpeg 480w, https://mi0034.icu/p/neo-regeorg%E4%BB%A3%E7%90%86/attachment/478ba592e81598eb8e47357c7d9603f6_hu14008465291412975696.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;181&#34;
+		data-flex-basis=&#34;436px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>NPS代理</title>
+        <link>https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post NPS代理" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;#ZgotmplZ&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/59558731?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;NPS下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt; https://github.com/ehang-io/nps#/&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一款轻量级、高性能、功能强大的内网穿透代理服务器&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：一款轻量级、高性能、功能强大的内网穿透代理服务器。支持 tcp、udp、socks5、http 等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh 访问、远程桌面，内网 dns 解析、内网 socks5代理，项目功能很强大，还有官方的安卓客户端&lt;/p&gt;
+&lt;h2 id=&#34;0x0101-nps技术介绍&#34;&gt;0x01.01 NPS技术介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;NPS 通过在拥有公网 IP 的服务器上部署服务端，以及在内网目标机器上部署客户端，建立起一条从公网到内网的隧道。服务端监听公网 IP 上的特定端口，当外部请求到达这些端口时，NPS 服务端将流量通过隧道转发到内网的客户端，再由客户端转发到内网的目标机器上。这样，即使目标机器位于内网，也可以通过公网 IP 和相应的端口访问到它&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS
+GO 版本：2:1.21~2
+NPS 版本： 最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0201a-自动下载-git&#34;&gt;0x02.01.A 自动下载 git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!error] 这里不建议使用 git，因为还需要自己编译，对环境有要求&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/ehang-io/nps.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;1201&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab_hu5164836210564781057.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab_hu3431966246487954346.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入目录，进行编译：
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进行更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update --upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 添加权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod +x build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 运行构建&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7.jpeg&#34;
+	width=&#34;1617&#34;
+	height=&#34;1164&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7_hu9657325135844562218.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7_hu7934685498442916760.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;0x0201b-手动下载&#34;&gt;0x02.01.B 手动下载
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;手动文件下载：
+选择对应的系统，下载服务端和客户端
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033.jpeg&#34;
+	width=&#34;2535&#34;
+	height=&#34;1183&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033_hu13428370348607554748.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033_hu13537148633917844287.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;514px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 将客户端上传到需要穿透的主机
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe_hu11294559218471178539.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe_hu13311928623721825716.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;
+安装：
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./npc install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;| 将服务端上传到公网主机
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625.jpeg&#34;
+	width=&#34;1600&#34;
+	height=&#34;1191&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625_hu11332695231379708761.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625_hu2702518967396087284.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-配置编辑服务运行&#34;&gt;0x03 配置编辑&amp;amp;服务运行
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0301-服务端配置&#34;&gt;0x03.01 服务端配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;|可以根据自身情况调整&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce.jpeg&#34;
+	width=&#34;1632&#34;
+	height=&#34;1212&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce_hu6949238047857895768.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce_hu10957457731771670599.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 启动后进入 web
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1187&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a_hu7030247789577499318.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a_hu3448032619872350251.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;517px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1195&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8_hu10166153843851389013.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8_hu4609817832770674681.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;514px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 配置 web 端，给客户端连接做准备
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b.jpeg&#34;
+	width=&#34;2224&#34;
+	height=&#34;1145&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b_hu424817098974311149.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b_hu2659364252249453091.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd.jpeg&#34;
+	width=&#34;2122&#34;
+	height=&#34;445&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd_hu125628998731042185.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd_hu1993664967097044575.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;476&#34;
+		data-flex-basis=&#34;1144px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 分别设置 http，socks，tcp 隧道
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3_hu9343993948634897566.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3_hu301549187399311861.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba_hu16290109726241488019.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba_hu7861136560693043153.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe_hu15182724829594848012.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe_hu18078830509092857118.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 获取配置信息
+回到客户端界面，点击客户端前的小加号获取
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6.jpeg&#34;
+	width=&#34;2068&#34;
+	height=&#34;221&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6_hu1573855807907222448.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6_hu14094897193097707303.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;935&#34;
+		data-flex-basis=&#34;2245px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-客户端配置&#34;&gt;0x03.02 客户端配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;|可以根据自身情况调整
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc.jpeg&#34;
+	width=&#34;1620&#34;
+	height=&#34;1119&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc_hu16764820000433358170.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc_hu16247380056522058690.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 使用配置启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./npc -server&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;public_ip -vkey&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;miaomiao@123 -type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;tcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346.jpeg&#34;
+	width=&#34;1586&#34;
+	height=&#34;134&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346_hu6509373068069460226.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346_hu1060160468600771826.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1183&#34;
+		data-flex-basis=&#34;2840px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 开放防火墙
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb.jpeg&#34;
+	width=&#34;1441&#34;
+	height=&#34;368&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb_hu4067112883537137202.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb_hu12138298516289684570.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;391&#34;
+		data-flex-basis=&#34;939px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f.jpeg&#34;
+	width=&#34;1561&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f_hu14429738874391053765.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f_hu9580670895181060248.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1076&#34;
+		data-flex-basis=&#34;2583px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x04-补充&#34;&gt;0x04 补充
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;| 需关闭&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npc stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>SSH隧道</title>
+        <link>https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/cover.png" alt="Featured image of post SSH隧道" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;https://github.com/openssh/openssh-portable&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/2387206?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;SSH下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/openssh/openssh-portable&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一个便携式 OpenSSH&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：SSH (Secure Shell) 不仅是安全远程管理的工具，也是在主机之间创建安全隧道的强大工具&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS | windows 11
+SSH 版本：最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装openssh服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install openssh-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 检查&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl status ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;0x0202-配置&#34;&gt;0x02.02 配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进入配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;0x03-建立隧道&#34;&gt;0x03 建立隧道
+&lt;/h1&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!info] 搭建 web 进行测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;0x0301-正向隧道&#34;&gt;0x03.01 正向隧道
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;正向 SSH 的场景中，目标服务器或服务通常位于客户端可以直接或间接访问的网络中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c.jpeg&#34;
+	width=&#34;1878&#34;
+	height=&#34;1152&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c_hu7943520001604918166.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c_hu16396870336321621789.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;391px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip] 提示
+这里可能很多人会有误解，在目标 ip 上填写的私网地址是相对于公网服务器来说的，也就是公网服务器所处的一个不对外的内网环境&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;| 本地
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ssh服务器与目标服务是一台主机&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -L 8087:localhost:8080 root@public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;内网 ：ip=10.0.0.2
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd.jpeg&#34;
+	width=&#34;1491&#34;
+	height=&#34;304&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd_hu7908232163411761047.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd_hu10421512063232551160.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;490&#34;
+		data-flex-basis=&#34;1177px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb.jpeg&#34;
+	width=&#34;1708&#34;
+	height=&#34;519&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb_hu17350147572463810084.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb_hu17678224229538644719.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;329&#34;
+		data-flex-basis=&#34;789px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 代理成功
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62.jpeg&#34;
+	width=&#34;1781&#34;
+	height=&#34;1217&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62_hu3783640167198879071.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62_hu16467700452158600033.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-反向隧道&#34;&gt;0x03.02 反向隧道
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;将远程服务器上的端口转发到本地机器上的端口的过程，当设置一个反向 SSH 隧道时，实际上是在远程服务器上创建了一个端口，当访问这个端口时，流量会通过 SSH 隧道转发到连接的本地机器的指定端口&lt;/p&gt;
+&lt;p&gt;| 相当于一个端口转发，类似于 frp 吧
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035.jpeg&#34;
+	width=&#34;2132&#34;
+	height=&#34;1347&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035_hu7633880027373284885.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035_hu13489927782184045922.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;
+| 内网服务器
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -R 8087:localhost:8080 root@public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>suo5隧道</title>
+        <link>https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/cover.png" alt="Featured image of post suo5隧道" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;#ZgotmplZ&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/20637881?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;suo5下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt; https://github.com/zema1/suo5#/&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一款高性能 HTTP 代理隧道工具&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：一款高性能 HTTP 代理隧道工具，属于对网站端口的复用吧，走的 TCP 协议&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS | tomcat
+suo5 版本： 最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 选择适合的版本
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd.jpeg&#34;
+	width=&#34;1843&#34;
+	height=&#34;1164&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd_hu13831829915192418249.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd_hu797359139145728866.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 服务端有普通技术栈和 java 技术栈两个选择
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2.jpeg&#34;
+	width=&#34;1813&#34;
+	height=&#34;914&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2_hu6933501410788874878.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2_hu7381431256525268518.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;476px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装-1&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| windows 可以直接使用 gui 客户端
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1.jpeg&#34;
+	width=&#34;1398&#34;
+	height=&#34;823&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1_hu7342265087553926136.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1_hu9920305332055989713.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-开始代理&#34;&gt;0x03 开始代理
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0301-正向代理&#34;&gt;0x03.01 正向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 上传之后连接
+这里使用 CVE-2017-12615 漏洞环境测试
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54_hu5118041160496023204.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54_hu15770616424223474452.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c.jpeg&#34;
+	width=&#34;1842&#34;
+	height=&#34;90&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c_hu4943408286685752984.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c_hu8678875884310876814.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2046&#34;
+		data-flex-basis=&#34;4912px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 看看网页情况，tomcat 7.0.79
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1238&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb_hu8999442627103351647.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb_hu7675446114243241378.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;496px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 上传 suo5 的文件
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1368&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403_hu9114154959373989721.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403_hu8996972028683812276.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;449px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 成功连接
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818.jpeg&#34;
+	width=&#34;998&#34;
+	height=&#34;1144&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818_hu3655168238346839845.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818_hu70968332121164436.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0301-反向代理&#34;&gt;0x03.01 反向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 在 Nginx+Tomcat 环境中呢，Nginx 处理 &lt;code&gt;Chunked-Encoding&lt;/code&gt; 类型的 Body 时会缓存 Body 的情况下，Suo5 也能够通过特定的响应头 &lt;code&gt;X-Accel-Buffering: no&lt;/code&gt; 来绕过这一限制，实现数据的直连传输&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>端口转发与代理</title>
         <link>https://mi0034.icu/p/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91%E4%B8%8E%E4%BB%A3%E7%90%86/</link>
         <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>

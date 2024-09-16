@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="神奇小知识👉又来了👇">
+<title>EW代理</title>
+
+<link rel='canonical' href='https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/'>
+
+<link rel="stylesheet" href="/scss/style.min.2ca1a90fda9b99db3a71c82ff1948360ddacde646ca6e9a94410f64652d84c86.css"><meta property='og:title' content="EW代理">
+<meta property='og:description' content="神奇小知识👉又来了👇">
+<meta property='og:url' content='https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/'>
+<meta property='og:site_name' content='MII0&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='端口转发' /><meta property='article:tag' content='内网穿透' /><meta property='article:tag' content='代理' /><meta property='article:tag' content='EW' /><meta property='article:published_time' content='2024-09-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/cover.png' />
+<meta name="twitter:title" content="EW代理">
+<meta name="twitter:description" content="神奇小知识👉又来了👇"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+        <div id="article-toolbar" style="position: sticky;top: 10px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0x0101-项目介绍">0x01.01 项目介绍</a></li>
+    <li><a href="#0x0102-ew-技术介绍">0x01.02 EW 技术介绍</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0201-下载安装">0x02.01 下载安装</a>
+      <ol>
+        <li><a href="#0x0201a-自动下载-git">0x02.01.A 自动下载 git</a></li>
+        <li><a href="#0x0201b-手动下载">0x02.01.B 手动下载</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x-0301-普通网络环境">0x 03.01 普通网络环境</a></li>
+    <li><a href="#0x-0302-二重网络环境">0x 03.02 二重网络环境</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/ew%E4%BB%A3%E7%90%86/">
+                <img src="/p/ew%E4%BB%A3%E7%90%86/cover_hu9658640773875471818.png"
+                        srcset="/p/ew%E4%BB%A3%E7%90%86/cover_hu9658640773875471818.png 800w, /p/ew%E4%BB%A3%E7%90%86/cover_hu10290851994159963905.png 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post EW代理" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="background-color: #2a9d8f; color: #fff;">
+                网络安全
+            </a>
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" >
+                网络知识
+            </a>
+        
+            <a href="/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" >
+                内网穿透
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ew%E4%BB%A3%E7%90%86/">EW代理</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            神奇小知识👉又来了👇
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-09-16</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="0x01-技术介绍">0x01 技术介绍
+</h1><hr>
+<h2 id="0x0101-项目介绍">0x01.01 项目介绍
+</h2><hr>
+<div style="display: flex; align-items: center; width: 100%;">
+  <a href="https://github.com/idlefire/ew#/" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+    <img class="vp-card-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" loading="lazy" alt="Logo" style="margin-right: 15px;">
+    <div class="vp-card-content">
+      <div class="vp-card-title">EW下载地址：</div>
+      <div class="vp-card-links">https://github.com/idlefire/ew#/</div>
+      <div class="vp-card-desc"><b>内网穿透</b></div>
+    </div>
+  </a>
+</div>
+
+<style>
+  .cards-container {
+      display: flex;
+      justify-content: center;  
+    }
+    
+    .vp-card {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 120px;  
+      max-height: 120px;  
+    }
+    
+  .vp-card {
+    display: flex;
+    align-items: center;  
+    background: #ffffff;  
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #eaeaea;  
+    border-radius: 25px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;  
+    position: relative;  
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .vp-card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-left: 25px
+  }
+  
+  .vp-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;  
+    flex-grow: 1;
+    position: relative;  
+  }
+  
+  .vp-card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;  
+    border-left: 2px dashed #eaeaea;  
+    z-index: 1;  
+  }
+  
+  .vp-card-title {
+    font-size: 2.0rem;  
+    color: #1a0dab;  
+    margin-bottom: 8px;  
+    line-height: 1;  
+    font-weight: bold;  
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    color: transparent;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+  }
+  
+  .vp-card-links {
+      font-size: 12px;  
+      color: #5f6368;  
+      margin-bottom: 8px;  
+      line-height: 1.4;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+    }
+  
+  .vp-card-links:hover {
+    color: #1a0dab;  
+  }
+  
+  .vp-card-desc {
+    font-size: 1.4rem;  
+    color: #666;  
+    line-height: 1.6;  
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;  
+    margin: 14px 0;  
+  }
+  
+  @media (min-width: 600px) {
+      .vp-card {
+        flex: 1 1 250px;  
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .vp-card {
+        flex: 1 1 150px;  
+        max-width: 100%;  
+      }
+    }
+  </style>
+
+<p>项目介绍：EarthWorm 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。</p>
+<h2 id="0x0102-ew-技术介绍">0x01.02 EW 技术介绍
+</h2><hr>
+<p>全称：Earthworm
+实现流程：
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93.jpeg"
+	width="810"
+	height="600"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu4471814556839221325.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu17046947134241356879.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="324px"
+	
+></p>
+<p>优点：可执行文件，以适用不同的操作系统，Linux、Windows、MacOS、Arm-Linux 均被包括其内，还支持多级级联</p>
+<h1 id="0x02-环境文件准备">0x02 环境&amp;文件准备
+</h1><hr>
+<p>安装环境：Ubuntu Server 24.0LTS
+EW 版本： 最新（8 年前了）</p>
+<h2 id="0x0201-下载安装">0x02.01 下载安装
+</h2><hr>
+<h3 id="0x0201a-自动下载-git">0x02.01.A 自动下载 git
+</h3><hr>
+<p>使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://gitclone.com/github.com/idlefire/ew.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39.jpeg"
+	width="1602"
+	height="198"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu10589173252350944881.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu2888941450667944309.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="809"
+		data-flex-basis="1941px"
+	
+></p>
+<p>进入目录：
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd.jpeg"
+	width="1609"
+	height="1209"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu6515886124420246988.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu15672659711350708679.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="319px"
+	
+></p>
+<h3 id="0x0201b-手动下载">0x02.01.B 手动下载
+</h3><hr>
+<p>手动文件下载：
+|选择对应的版本使用
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f.jpeg"
+	width="739"
+	height="564"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu13505232627668769119.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu2624512055136412697.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="131"
+		data-flex-basis="314px"
+	
+></p>
+<h1 id="0x03-配置编辑服务运行">0x03 配置编辑&amp;服务运行
+</h1><hr>
+<h2 id="0x-0301-普通网络环境">0x 03.01 普通网络环境
+</h2><p><strong>有公网：</strong>
+拓扑：
+攻击机-&raquo;靶机</p>
+<p>在目标靶机上使用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./ew -s ssocksd -l <span class="m">1022</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>演示：</p>
+<p><img src="/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f.jpeg"
+	width="1073"
+	height="873"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu10788756764759740930.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu6511649281130936512.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="122"
+		data-flex-basis="294px"
+	
+>
+使用 proxyfier, 连接成功
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968.jpeg"
+	width="914"
+	height="556"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu1056649741964825504.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu13725304950990846142.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="164"
+		data-flex-basis="394px"
+	
+></p>
+<p><strong>无公网：</strong>
+拓扑：
+攻击机-&raquo;公网跳板(/)&laquo;-内网靶机 (192.168.0.2)</p>
+<p>在公网跳板机上使用命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./ew -s rcsocks -l <span class="m">1022</span> -e <span class="m">10022</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在内网靶机</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">./ew -s rssocks -d public_ip -e <span class="m">10022</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时公网主机通过接受 1080 端口请求，发送给 8888 端口，内网主机接收 8888 端口</p>
+<p>演示：</p>
+<p>| 内网主机开启
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu16896199396918979259.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu11404953662209182711.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>| 公网主机开启
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3.jpeg"
+	width="977"
+	height="336"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu5713723057775979420.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu6822426150365664295.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="290"
+		data-flex-basis="697px"
+	
+></p>
+<p>| 攻击机测试
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06.jpeg"
+	width="918"
+	height="603"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu11003598558608821060.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu6846341995782979870.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="365px"
+	
+>
+<img src="/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe.jpeg"
+	width="1046"
+	height="295"
+	srcset="/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu5187385374854465522.jpeg 480w, /p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu7285563567119342730.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="354"
+		data-flex-basis="850px"
+	
+></p>
+<h2 id="0x-0302-二重网络环境">0x 03.02 二重网络环境
+</h2><p>| 搭建方法类同</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">端口转发</a>
+        
+            <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        
+            <a href="/tags/%E4%BB%A3%E7%90%86/">代理</a>
+        
+            <a href="/tags/ew/">EW</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        
+        
+            <div class="article-image">
+                <img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.a655ee61e62cc9f7609f340a8db93461_hu5106650224298509466.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FRP内网穿透"
+                        
+                        data-hash="md5-plXuYeYsyfdgnzQKjbk0YQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FRP内网穿透</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nps%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nps%E4%BB%A3%E7%90%86/cover.4acab2c523854794e61723becc0becd3_hu10683080851496780836.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NPS代理"
+                        
+                        data-hash="md5-SsqyxSOFR5TmFyO&#43;zAvs0w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPS代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neo-regeorg%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.af94c7f87e2fce56393580d3feb8dc01_hu12624667778332561087.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Neo-reGeorg代理"
+                        
+                        data-hash="md5-r5TH&#43;H4vzlY5NYDT/rjcAQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Neo-reGeorg代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ssh%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ssh%E9%9A%A7%E9%81%93/cover.d55baa30e02b6d6a37a57d67583ac285_hu9104437600191226121.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SSH隧道"
+                        
+                        data-hash="md5-1VuqMOArbWo3pX1nWDrChQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/suo5%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/suo5%E9%9A%A7%E9%81%93/cover.b787f1861789ad680abb7b4831e61804_hu934676597337776263.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post suo5隧道"
+                        
+                        data-hash="md5-t4fxhheJrWgKu3tIMeYYBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">suo5隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="klopiop/klopiop.github.io"
+    data-repo-id="R_kgDOMxDnIA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMxDnIM4Cib9E"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 MII0&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-packages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M2 13.5v5.5l5 3" /><path d="M7 16.545l5 -3.03" /><path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M12 19l5 3" /><path d="M17 16.5l5 -3" /><path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" /><path d="M7 5.03v5.455" /><path d="M12 8l5 -3" /></svg> INP-xx-001-MII0 <br/>
+        
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+    
+    <script>
+        function cardLink() {
+          let $cardLinks = document.querySelectorAll('.card-link');
+          if ($cardLinks.length === 0) {
+            return;
+          }
+          
+          let $linkStyle = document.createElement('style');
+          $linkStyle.innerHTML =
+            '.card-link,.card-link:hover{text-decoration:none;border:none!important;color:inherit!important}' +
+            '.card-link{position:relative;display:block;margin:1em auto;width:390px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none}' +
+            '.card-link-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url(/images/card-link-bg.jpg);background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center}' +
+            '.card-link-content{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)}' +
+            '.card-link-text{overflow:hidden}' +
+            '.card-link-title{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a}' +
+            '.card-link-meta{display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap}' +
+            '.card-link-url{display: inline-flex;align-items: center;}' +
+            '.card-link-imageCell{margin-left:8px;border-radius:6px}' +
+            '.card-link-image{display:block;width:60px;height:60px;border-radius:inherit}';
+          document.querySelector('body').appendChild($linkStyle);
+        
+          
+          for (let $cardLink of $cardLinks) {
+            let $title = $cardLink.querySelector('.card-link-title').innerText;
+            let $url = $cardLink.getAttribute('href');
+            let $imgUrl = $cardLink.getAttribute('data-img');
+            let $imageHtml = $imgUrl ? `<span class='card-link-imageCell'><img class='card-link-image' src='${$imgUrl}' alt='icon'></span>` : '';
+        
+            $cardLink.innerHTML = `
+              <span class='card-link-backdrop'></span>
+              <span class='card-link-content'>
+                <span class='card-link-text'>
+                  <span class='card-link-title'>${$title}</span>
+                  <span class='card-link-meta'>
+                    <span class='card-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous" defer></script>
+    </body>
+</html>

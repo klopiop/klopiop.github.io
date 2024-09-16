@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="如何搭建，如何部署，如何优化呢">
+<title>hugo个人博客引擎</title>
+
+<link rel='canonical' href='https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/'>
+
+<link rel="stylesheet" href="/scss/style.min.2ca1a90fda9b99db3a71c82ff1948360ddacde646ca6e9a94410f64652d84c86.css"><meta property='og:title' content="hugo个人博客引擎">
+<meta property='og:description' content="如何搭建，如何部署，如何优化呢">
+<meta property='og:url' content='https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/'>
+<meta property='og:site_name' content='MII0&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='个人博客' /><meta property='article:tag' content='hugo' /><meta property='article:tag' content='stack主题' /><meta property='article:tag' content='github action' /><meta property='article:published_time' content='2024-09-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-15T00:00:00&#43;00:00'/><meta property='og:image' content='https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover.png' />
+<meta name="twitter:title" content="hugo个人博客引擎">
+<meta name="twitter:description" content="如何搭建，如何部署，如何优化呢"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+        <div id="article-toolbar" style="position: sticky;top: 10px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0x0101-文档介绍">0x01.01 文档介绍</a></li>
+    <li><a href="#0x0102-项目介绍">0x01.02 项目介绍</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0201-环境介绍">0x02.01 环境介绍</a></li>
+    <li><a href="#0x0202-支撑环境安装">0x02.02 支撑环境安装</a>
+      <ol>
+        <li><a href="#0x0202a-git">0x02.02.a Git</a></li>
+        <li><a href="#0x0202b-hugo">0x02.02.b hugo</a></li>
+      </ol>
+    </li>
+    <li><a href="#0x0203-博客本地部署">0x02.03 博客本地部署</a></li>
+    <li><a href="#0x0204-博客github部署">0x02.04 博客Github部署</a>
+      <ol>
+        <li><a href="#heading"></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/">
+                <img src="/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover_hu12532389855314424504.png"
+                        srcset="/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover_hu12532389855314424504.png 800w, /p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover_hu10423051132773778658.png 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post hugo个人博客引擎" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" >
+                个人博客
+            </a>
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" >
+                网络知识
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/">hugo个人博客引擎</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            如何搭建，如何部署，如何优化呢
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-09-15</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="0x01-文档及项目介绍">0x01 文档及项目介绍
+</h1><hr>
+<h2 id="0x0101-文档介绍">0x01.01 文档介绍
+</h2><hr>
+<p>😀<strong>引子：</strong> 因为自己本身就使用hugo搭建了自己的博客，那么本着分享自己的搭建经验和一些体验心得，个人认为可能可以给到大家一个小小的参考吧。</p>
+<p>😊那么接下来就进入正片吧~~~</p>
+<h2 id="0x0102-项目介绍">0x01.02 项目介绍
+</h2><hr>
+<p>简单来讲呢，就是一个快速的静态站点生成器，专门对速度进行了优化，可以在几秒内呈现完整网站（😉不是自己部署的时候哦，是生成页面的时候）</p>
+<h1 id="0x02-部署">0x02 部署
+</h1><hr>
+<h2 id="0x0201-环境介绍">0x02.01 环境介绍
+</h2><hr>
+<p>操作系统：win11
+git：latest
+hugo：latest</p>
+<h2 id="0x0202-支撑环境安装">0x02.02 支撑环境安装
+</h2><hr>
+<h3 id="0x0202a-git">0x02.02.a Git
+</h3><hr>
+<p>项目地址：
+<div style="display: flex; align-items: center; width: 100%;">
+    <a href="https://git-scm.com/download/win" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+      <img class="vp-card-logo" src="https://git-scm.com/images/logo@2x.png" loading="lazy" alt="Logo" style="margin-right: 15px;">
+      <div class="vp-card-content">
+        <div class="vp-card-title">Git下载地址：</div>
+        <div class="vp-card-links">https://git-scm.com/download/win</div>
+        <div class="vp-card-desc"><b>一个项目管理工具</b></div>
+      </div>
+    </a>
+  </div>
+  
+  <style>
+    .cards-container {
+        display: flex;
+        justify-content: center;  
+      }
+      
+      .vp-card {
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 120px;  
+        max-height: 120px;  
+      }
+      
+    .vp-card {
+      display: flex;
+      align-items: center;  
+      background: #ffffff;  
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #eaeaea;  
+      border-radius: 25px;  
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Arial', sans-serif;  
+      position: relative;  
+    }
+    
+    .vp-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+    }
+    
+    .vp-card-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;  
+      object-fit: cover;  
+      margin-left: 25px
+    }
+    
+    .vp-card-content {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;  
+      flex-grow: 1;
+      position: relative;  
+    }
+    
+    .vp-card-content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 10px;  
+      border-left: 2px dashed #eaeaea;  
+      z-index: 1;  
+    }
+    
+    .vp-card-title {
+      font-size: 2.0rem;  
+      color: #1a0dab;  
+      margin-bottom: 8px;  
+      line-height: 1;  
+      font-weight: bold;  
+      background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+      -webkit-background-clip: text;  
+      background-clip: text;  
+      color: transparent;  
+      transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+    }
+    
+    .vp-card-links {
+        font-size: 12px;  
+        color: #5f6368;  
+        margin-bottom: 8px;  
+        line-height: 1.4;  
+        text-decoration: none;  
+        transition: color 0.3s ease;  
+        white-space: nowrap;  
+        overflow: hidden;  
+        text-overflow: ellipsis;  
+      }
+    
+    .vp-card-links:hover {
+      color: #1a0dab;  
+    }
+    
+    .vp-card-desc {
+      font-size: 1.4rem;  
+      color: #666;  
+      line-height: 1.6;  
+    }
+    
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #eaeaea;  
+      margin: 14px 0;  
+    }
+    
+    @media (min-width: 600px) {
+        .vp-card {
+          flex: 1 1 250px;  
+        }
+      }
+      
+      @media (max-width: 599px) {
+        .vp-card {
+          flex: 1 1 150px;  
+          max-width: 100%;  
+        }
+      }
+    </style>
+</p>
+<ol>
+<li>
+<p>选择下载
+<img src="/attachment%5cdc2924b1b7fe407d16be84d7662550e9.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>打开下载好的安装包进行安装,下一步
+<img src="/attachment%5c1319714dce3ba4e640074d47524150b8.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>自己选择默认的编辑器，我是vscode
+<img src="/attachment%5c4f25309874f819a4ed05a171eb65de16.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>一直下一步，看到install，安装就行
+<img src="/attachment%5c58659148dc43354f427ec72f36f5f80c.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ol>
+<h3 id="0x0202b-hugo">0x02.02.b hugo
+</h3><hr>
+<p>获取hugo：
+<div style="display: flex; align-items: center; width: 100%;">
+  <a href="#ZgotmplZ" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+    <img class="vp-card-logo" src="https://avatars.githubusercontent.com/u/29385237?s=48&amp;v=4" loading="lazy" alt="Logo" style="margin-right: 15px;">
+    <div class="vp-card-content">
+      <div class="vp-card-title">hugo下载地址：</div>
+      <div class="vp-card-links">[https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)</div>
+      <div class="vp-card-desc"><b>一个项目管理工具</b></div>
+    </div>
+  </a>
+</div>
+
+<style>
+  .cards-container {
+      display: flex;
+      justify-content: center;  
+    }
+    
+    .vp-card {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 120px;  
+      max-height: 120px;  
+    }
+    
+  .vp-card {
+    display: flex;
+    align-items: center;  
+    background: #ffffff;  
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #eaeaea;  
+    border-radius: 25px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Arial', sans-serif;  
+    position: relative;  
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .vp-card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-left: 25px
+  }
+  
+  .vp-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;  
+    flex-grow: 1;
+    position: relative;  
+  }
+  
+  .vp-card-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;  
+    border-left: 2px dashed #eaeaea;  
+    z-index: 1;  
+  }
+  
+  .vp-card-title {
+    font-size: 2.0rem;  
+    color: #1a0dab;  
+    margin-bottom: 8px;  
+    line-height: 1;  
+    font-weight: bold;  
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    color: transparent;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+  }
+  
+  .vp-card-links {
+      font-size: 12px;  
+      color: #5f6368;  
+      margin-bottom: 8px;  
+      line-height: 1.4;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+    }
+  
+  .vp-card-links:hover {
+    color: #1a0dab;  
+  }
+  
+  .vp-card-desc {
+    font-size: 1.4rem;  
+    color: #666;  
+    line-height: 1.6;  
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;  
+    margin: 14px 0;  
+  }
+  
+  @media (min-width: 600px) {
+      .vp-card {
+        flex: 1 1 250px;  
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .vp-card {
+        flex: 1 1 150px;  
+        max-width: 100%;  
+      }
+    }
+  </style>
+</p>
+<ol>
+<li>
+<p>选择对应包下载（选择带extended字样，包含完整拓展的）
+<img src="/attachment%5c7cde95fccef3c5d2e37fad96d9cde4f3.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>创建hugo目录，丢进去就行（自定义）
+<img src="/attachment%5c1f30f5749d920bc88c9349ce5d9f58e1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>创建环境变量，方便调用
+<img src="/attachment%5ccf6563974411bec068407497be13abb9.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+<img src="/attachment%5c5e07aead8b357fa21ac55eadac50b045.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+>
+<img src="/attachment%5c3025df08ea6c80c39e39d022d6621b26.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>测试安装情况
+<img src="/attachment%5cc2b608439555d800d8b3e7e192087fbf.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+</ol>
+<h2 id="0x0203-博客本地部署">0x02.03 博客本地部署
+</h2><hr>
+<ol>
+<li>
+<p>找一个心仪的目录用来创建站点文件夹（博客目录）
+<img src="/attachment%5cb33b89a5c73a8ad45666a53800a4a795.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+</li>
+<li>
+<p>初始化站点
+使用命令</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 在目录下启动cmd</span>
+</span></span><span class="line"><span class="cl">hugo new site blog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/attachment%5c560f7f8998c1a1462357cead71125d4b.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></p>
+<ol start="3">
+<li>进入文件夹
+<img src="/attachment%5c51a4e3098f0dcaa6a494347d47608eb1.png"
+	
+	
+	
+	loading="lazy"
+	
+	
+></li>
+</ol>
+<h2 id="0x0204-博客github部署">0x02.04 博客Github部署
+</h2><hr>
+<h3 id="heading">
+</h3>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">个人博客</a>
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/stack%E4%B8%BB%E9%A2%98/">Stack主题</a>
+        
+            <a href="/tags/github-action/">Github Action</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/ew%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ew%E4%BB%A3%E7%90%86/cover.b6f39c2c041aa06c712c943e1f333e0b_hu7679812124843827805.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post EW代理"
+                        
+                        data-hash="md5-tvOcLAQaoGxxLJQ&#43;HzM&#43;Cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">EW代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+        
+        
+            <div class="article-image">
+                <img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.a655ee61e62cc9f7609f340a8db93461_hu5106650224298509466.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post FRP内网穿透"
+                        
+                        data-hash="md5-plXuYeYsyfdgnzQKjbk0YQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">FRP内网穿透</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nps%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nps%E4%BB%A3%E7%90%86/cover.4acab2c523854794e61723becc0becd3_hu10683080851496780836.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NPS代理"
+                        
+                        data-hash="md5-SsqyxSOFR5TmFyO&#43;zAvs0w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPS代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neo-regeorg%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.af94c7f87e2fce56393580d3feb8dc01_hu12624667778332561087.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Neo-reGeorg代理"
+                        
+                        data-hash="md5-r5TH&#43;H4vzlY5NYDT/rjcAQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Neo-reGeorg代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ssh%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ssh%E9%9A%A7%E9%81%93/cover.d55baa30e02b6d6a37a57d67583ac285_hu9104437600191226121.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SSH隧道"
+                        
+                        data-hash="md5-1VuqMOArbWo3pX1nWDrChQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="klopiop/klopiop.github.io"
+    data-repo-id="R_kgDOMxDnIA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMxDnIM4Cib9E"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 MII0&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-packages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M2 13.5v5.5l5 3" /><path d="M7 16.545l5 -3.03" /><path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M12 19l5 3" /><path d="M17 16.5l5 -3" /><path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" /><path d="M7 5.03v5.455" /><path d="M12 8l5 -3" /></svg> INP-xx-001-MII0 <br/>
+        
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+    
+    <script>
+        function cardLink() {
+          let $cardLinks = document.querySelectorAll('.card-link');
+          if ($cardLinks.length === 0) {
+            return;
+          }
+          
+          let $linkStyle = document.createElement('style');
+          $linkStyle.innerHTML =
+            '.card-link,.card-link:hover{text-decoration:none;border:none!important;color:inherit!important}' +
+            '.card-link{position:relative;display:block;margin:1em auto;width:390px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none}' +
+            '.card-link-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url(/images/card-link-bg.jpg);background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center}' +
+            '.card-link-content{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)}' +
+            '.card-link-text{overflow:hidden}' +
+            '.card-link-title{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a}' +
+            '.card-link-meta{display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap}' +
+            '.card-link-url{display: inline-flex;align-items: center;}' +
+            '.card-link-imageCell{margin-left:8px;border-radius:6px}' +
+            '.card-link-image{display:block;width:60px;height:60px;border-radius:inherit}';
+          document.querySelector('body').appendChild($linkStyle);
+        
+          
+          for (let $cardLink of $cardLinks) {
+            let $title = $cardLink.querySelector('.card-link-title').innerText;
+            let $url = $cardLink.getAttribute('href');
+            let $imgUrl = $cardLink.getAttribute('data-img');
+            let $imageHtml = $imgUrl ? `<span class='card-link-imageCell'><img class='card-link-image' src='${$imgUrl}' alt='icon'></span>` : '';
+        
+            $cardLink.innerHTML = `
+              <span class='card-link-backdrop'></span>
+              <span class='card-link-content'>
+                <span class='card-link-text'>
+                  <span class='card-link-title'>${$title}</span>
+                  <span class='card-link-meta'>
+                    <span class='card-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous" defer></script>
+    </body>
+</html>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>个人博客 on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+        <description>Recent content in 个人博客 on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo个人博客引擎</title>
+        <link>https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/hugo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%BC%95%E6%93%8E/cover.png" alt="Featured image of post hugo个人博客引擎" /&gt;&lt;h1 id=&#34;0x01-文档及项目介绍&#34;&gt;0x01 文档及项目介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-文档介绍&#34;&gt;0x01.01 文档介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;😀&lt;strong&gt;引子：&lt;/strong&gt; 因为自己本身就使用hugo搭建了自己的博客，那么本着分享自己的搭建经验和一些体验心得，个人认为可能可以给到大家一个小小的参考吧。&lt;/p&gt;
+&lt;p&gt;😊那么接下来就进入正片吧~~~&lt;/p&gt;
+&lt;h2 id=&#34;0x0102-项目介绍&#34;&gt;0x01.02 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;简单来讲呢，就是一个快速的静态站点生成器，专门对速度进行了优化，可以在几秒内呈现完整网站（😉不是自己部署的时候哦，是生成页面的时候）&lt;/p&gt;
+&lt;h1 id=&#34;0x02-部署&#34;&gt;0x02 部署
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0201-环境介绍&#34;&gt;0x02.01 环境介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;操作系统：win11
+git：latest
+hugo：latest&lt;/p&gt;
+&lt;h2 id=&#34;0x0202-支撑环境安装&#34;&gt;0x02.02 支撑环境安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0202a-git&#34;&gt;0x02.02.a Git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;项目地址：
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+    &lt;a href=&#34;https://git-scm.com/download/win&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+      &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://git-scm.com/images/logo@2x.png&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+      &lt;div class=&#34;vp-card-content&#34;&gt;
+        &lt;div class=&#34;vp-card-title&#34;&gt;Git下载地址：&lt;/div&gt;
+        &lt;div class=&#34;vp-card-links&#34;&gt;https://git-scm.com/download/win&lt;/div&gt;
+        &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一个项目管理工具&lt;/b&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;style&gt;
+    .cards-container {
+        display: flex;
+        justify-content: center;  
+      }
+      
+      .vp-card {
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 120px;  
+        max-height: 120px;  
+      }
+      
+    .vp-card {
+      display: flex;
+      align-items: center;  
+      background: #ffffff;  
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #eaeaea;  
+      border-radius: 25px;  
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: &#39;Arial&#39;, sans-serif;  
+      position: relative;  
+    }
+    
+    .vp-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+    }
+    
+    .vp-card-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;  
+      object-fit: cover;  
+      margin-left: 25px
+    }
+    
+    .vp-card-content {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;  
+      flex-grow: 1;
+      position: relative;  
+    }
+    
+    .vp-card-content::before {
+      content: &#39;&#39;;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 10px;  
+      border-left: 2px dashed #eaeaea;  
+      z-index: 1;  
+    }
+    
+    .vp-card-title {
+      font-size: 2.0rem;  
+      color: #1a0dab;  
+      margin-bottom: 8px;  
+      line-height: 1;  
+      font-weight: bold;  
+      background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+      -webkit-background-clip: text;  
+      background-clip: text;  
+      color: transparent;  
+      transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+    }
+    
+    .vp-card-links {
+        font-size: 12px;  
+        color: #5f6368;  
+        margin-bottom: 8px;  
+        line-height: 1.4;  
+        text-decoration: none;  
+        transition: color 0.3s ease;  
+        white-space: nowrap;  
+        overflow: hidden;  
+        text-overflow: ellipsis;  
+      }
+    
+    .vp-card-links:hover {
+      color: #1a0dab;  
+    }
+    
+    .vp-card-desc {
+      font-size: 1.4rem;  
+      color: #666;  
+      line-height: 1.6;  
+    }
+    
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #eaeaea;  
+      margin: 14px 0;  
+    }
+    
+    @media (min-width: 600px) {
+        .vp-card {
+          flex: 1 1 250px;  
+        }
+      }
+      
+      @media (max-width: 599px) {
+        .vp-card {
+          flex: 1 1 150px;  
+          max-width: 100%;  
+        }
+      }
+    &lt;/style&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择下载
+&lt;img src=&#34;https://mi0034.icu/attachment%5cdc2924b1b7fe407d16be84d7662550e9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开下载好的安装包进行安装,下一步
+&lt;img src=&#34;https://mi0034.icu/attachment%5c1319714dce3ba4e640074d47524150b8.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自己选择默认的编辑器，我是vscode
+&lt;img src=&#34;https://mi0034.icu/attachment%5c4f25309874f819a4ed05a171eb65de16.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一直下一步，看到install，安装就行
+&lt;img src=&#34;https://mi0034.icu/attachment%5c58659148dc43354f427ec72f36f5f80c.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;0x0202b-hugo&#34;&gt;0x02.02.b hugo
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;获取hugo：
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+  &lt;a href=&#34;#ZgotmplZ&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+    &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/29385237?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+    &lt;div class=&#34;vp-card-content&#34;&gt;
+      &lt;div class=&#34;vp-card-title&#34;&gt;hugo下载地址：&lt;/div&gt;
+      &lt;div class=&#34;vp-card-links&#34;&gt;[https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases)&lt;/div&gt;
+      &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一个项目管理工具&lt;/b&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .cards-container {
+      display: flex;
+      justify-content: center;  
+    }
+    
+    .vp-card {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 120px;  
+      max-height: 120px;  
+    }
+    
+  .vp-card {
+    display: flex;
+    align-items: center;  
+    background: #ffffff;  
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #eaeaea;  
+    border-radius: 25px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: &#39;Arial&#39;, sans-serif;  
+    position: relative;  
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .vp-card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-left: 25px
+  }
+  
+  .vp-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;  
+    flex-grow: 1;
+    position: relative;  
+  }
+  
+  .vp-card-content::before {
+    content: &#39;&#39;;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;  
+    border-left: 2px dashed #eaeaea;  
+    z-index: 1;  
+  }
+  
+  .vp-card-title {
+    font-size: 2.0rem;  
+    color: #1a0dab;  
+    margin-bottom: 8px;  
+    line-height: 1;  
+    font-weight: bold;  
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    color: transparent;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+  }
+  
+  .vp-card-links {
+      font-size: 12px;  
+      color: #5f6368;  
+      margin-bottom: 8px;  
+      line-height: 1.4;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+    }
+  
+  .vp-card-links:hover {
+    color: #1a0dab;  
+  }
+  
+  .vp-card-desc {
+    font-size: 1.4rem;  
+    color: #666;  
+    line-height: 1.6;  
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;  
+    margin: 14px 0;  
+  }
+  
+  @media (min-width: 600px) {
+      .vp-card {
+        flex: 1 1 250px;  
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .vp-card {
+        flex: 1 1 150px;  
+        max-width: 100%;  
+      }
+    }
+  &lt;/style&gt;
+&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择对应包下载（选择带extended字样，包含完整拓展的）
+&lt;img src=&#34;https://mi0034.icu/attachment%5c7cde95fccef3c5d2e37fad96d9cde4f3.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建hugo目录，丢进去就行（自定义）
+&lt;img src=&#34;https://mi0034.icu/attachment%5c1f30f5749d920bc88c9349ce5d9f58e1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建环境变量，方便调用
+&lt;img src=&#34;https://mi0034.icu/attachment%5ccf6563974411bec068407497be13abb9.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/attachment%5c5e07aead8b357fa21ac55eadac50b045.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/attachment%5c3025df08ea6c80c39e39d022d6621b26.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试安装情况
+&lt;img src=&#34;https://mi0034.icu/attachment%5cc2b608439555d800d8b3e7e192087fbf.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;0x0203-博客本地部署&#34;&gt;0x02.03 博客本地部署
+&lt;/h2&gt;&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;找一个心仪的目录用来创建站点文件夹（博客目录）
+&lt;img src=&#34;https://mi0034.icu/attachment%5cb33b89a5c73a8ad45666a53800a4a795.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;初始化站点
+使用命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 在目录下启动cmd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo new site blog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/attachment%5c560f7f8998c1a1462357cead71125d4b.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;进入文件夹
+&lt;img src=&#34;https://mi0034.icu/attachment%5c51a4e3098f0dcaa6a494347d47608eb1.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+	
+&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;0x0204-博客github部署&#34;&gt;0x02.04 博客Github部署
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;heading&#34;&gt;
+&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

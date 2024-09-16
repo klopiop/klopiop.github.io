@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SSH on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/ssh/</link>
+        <description>Recent content in SSH on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/ssh/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>SSH隧道</title>
+        <link>https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/cover.png" alt="Featured image of post SSH隧道" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;https://github.com/openssh/openssh-portable&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/2387206?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;SSH下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/openssh/openssh-portable&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一个便携式 OpenSSH&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：SSH (Secure Shell) 不仅是安全远程管理的工具，也是在主机之间创建安全隧道的强大工具&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS | windows 11
+SSH 版本：最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 安装openssh服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install openssh-server
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 检查&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo systemctl status ssh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;0x0202-配置&#34;&gt;0x02.02 配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进入配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nano /etc/ssh/sshd_config
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h1 id=&#34;0x03-建立隧道&#34;&gt;0x03 建立隧道
+&lt;/h1&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!info] 搭建 web 进行测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;0x0301-正向隧道&#34;&gt;0x03.01 正向隧道
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;正向 SSH 的场景中，目标服务器或服务通常位于客户端可以直接或间接访问的网络中&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c.jpeg&#34;
+	width=&#34;1878&#34;
+	height=&#34;1152&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c_hu7943520001604918166.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/cc317860c4bd4e8ca714ab12ce08271c_hu16396870336321621789.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;163&#34;
+		data-flex-basis=&#34;391px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!tip] 提示
+这里可能很多人会有误解，在目标 ip 上填写的私网地址是相对于公网服务器来说的，也就是公网服务器所处的一个不对外的内网环境&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;| 本地
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# ssh服务器与目标服务是一台主机&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -L 8087:localhost:8080 root@public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;内网 ：ip=10.0.0.2
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd.jpeg&#34;
+	width=&#34;1491&#34;
+	height=&#34;304&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd_hu7908232163411761047.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/31288bbf738f4941b7b8064d615a04bd_hu10421512063232551160.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;490&#34;
+		data-flex-basis=&#34;1177px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb.jpeg&#34;
+	width=&#34;1708&#34;
+	height=&#34;519&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb_hu17350147572463810084.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/8f50bcabe8b7c15de7ec06ee952bf6cb_hu17678224229538644719.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;329&#34;
+		data-flex-basis=&#34;789px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 代理成功
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62.jpeg&#34;
+	width=&#34;1781&#34;
+	height=&#34;1217&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62_hu3783640167198879071.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/dbe4cbabd82607d6f4843ca7751c4f62_hu16467700452158600033.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-反向隧道&#34;&gt;0x03.02 反向隧道
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;将远程服务器上的端口转发到本地机器上的端口的过程，当设置一个反向 SSH 隧道时，实际上是在远程服务器上创建了一个端口，当访问这个端口时，流量会通过 SSH 隧道转发到连接的本地机器的指定端口&lt;/p&gt;
+&lt;p&gt;| 相当于一个端口转发，类似于 frp 吧
+&lt;img src=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035.jpeg&#34;
+	width=&#34;2132&#34;
+	height=&#34;1347&#34;
+	srcset=&#34;https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035_hu7633880027373284885.jpeg 480w, https://mi0034.icu/p/ssh%E9%9A%A7%E9%81%93/attachment/ea74444badc4ada6d4be585918682035_hu13489927782184045922.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;379px&#34;
+	
+&gt;
+| 内网服务器
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -R 8087:localhost:8080 root@public_ip
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

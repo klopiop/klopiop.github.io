@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>NPS on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/nps/</link>
+        <description>Recent content in NPS on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/nps/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>NPS代理</title>
+        <link>https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post NPS代理" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;#ZgotmplZ&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/59558731?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;NPS下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt; https://github.com/ehang-io/nps#/&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一款轻量级、高性能、功能强大的内网穿透代理服务器&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：一款轻量级、高性能、功能强大的内网穿透代理服务器。支持 tcp、udp、socks5、http 等几乎所有流量转发，可用来访问内网网站、本地支付接口调试、ssh 访问、远程桌面，内网 dns 解析、内网 socks5代理，项目功能很强大，还有官方的安卓客户端&lt;/p&gt;
+&lt;h2 id=&#34;0x0101-nps技术介绍&#34;&gt;0x01.01 NPS技术介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;NPS 通过在拥有公网 IP 的服务器上部署服务端，以及在内网目标机器上部署客户端，建立起一条从公网到内网的隧道。服务端监听公网 IP 上的特定端口，当外部请求到达这些端口时，NPS 服务端将流量通过隧道转发到内网的客户端，再由客户端转发到内网的目标机器上。这样，即使目标机器位于内网，也可以通过公网 IP 和相应的端口访问到它&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS
+GO 版本：2:1.21~2
+NPS 版本： 最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0201a-自动下载-git&#34;&gt;0x02.01.A 自动下载 git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[!error] 这里不建议使用 git，因为还需要自己编译，对环境有要求&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/ehang-io/nps.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;1201&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab_hu5164836210564781057.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/2c0582092d7ccf3c8fb6d6e4d95e23ab_hu3431966246487954346.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入目录，进行编译：
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 进行更新&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update --upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 添加权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo chmod +x build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 运行构建&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo ./build.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7.jpeg&#34;
+	width=&#34;1617&#34;
+	height=&#34;1164&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7_hu9657325135844562218.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/384d470a88ac15f7e13db90f7eeac5e7_hu7934685498442916760.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;138&#34;
+		data-flex-basis=&#34;333px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;0x0201b-手动下载&#34;&gt;0x02.01.B 手动下载
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;手动文件下载：
+选择对应的系统，下载服务端和客户端
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033.jpeg&#34;
+	width=&#34;2535&#34;
+	height=&#34;1183&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033_hu13428370348607554748.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/bf436fadda7b5e2a7dcd1ce0c14cb033_hu13537148633917844287.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;514px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 将客户端上传到需要穿透的主机
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe.jpeg&#34;
+	width=&#34;1615&#34;
+	height=&#34;1206&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe_hu11294559218471178539.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/06510ed3e1bee44e38d3f0596e4535fe_hu13311928623721825716.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;321px&#34;
+	
+&gt;
+安装：
+使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./npc install
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;| 将服务端上传到公网主机
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625.jpeg&#34;
+	width=&#34;1600&#34;
+	height=&#34;1191&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625_hu11332695231379708761.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/e41326fa2bf7410ca5ede922bdd17625_hu2702518967396087284.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;322px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-配置编辑服务运行&#34;&gt;0x03 配置编辑&amp;amp;服务运行
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0301-服务端配置&#34;&gt;0x03.01 服务端配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;|可以根据自身情况调整&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce.jpeg&#34;
+	width=&#34;1632&#34;
+	height=&#34;1212&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce_hu6949238047857895768.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/294361a9cf2e5a7e3583b43e0574ffce_hu10957457731771670599.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;134&#34;
+		data-flex-basis=&#34;323px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 启动后进入 web
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1187&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a_hu7030247789577499318.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/340650879da1a4d338285e5916e47b9a_hu3448032619872350251.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;215&#34;
+		data-flex-basis=&#34;517px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1195&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8_hu10166153843851389013.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/9b6adf4030f83ae889df4017f78b58b8_hu4609817832770674681.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;514px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 配置 web 端，给客户端连接做准备
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b.jpeg&#34;
+	width=&#34;2224&#34;
+	height=&#34;1145&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b_hu424817098974311149.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/7740234d0332847a869a5d082bf48a4b_hu2659364252249453091.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;466px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd.jpeg&#34;
+	width=&#34;2122&#34;
+	height=&#34;445&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd_hu125628998731042185.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/f0a38d5fdfdf650aaaee9a0b5e9b92cd_hu1993664967097044575.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;476&#34;
+		data-flex-basis=&#34;1144px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 分别设置 http，socks，tcp 隧道
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3_hu9343993948634897566.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/91418ac13e09196e7cd63818c2aa40b3_hu301549187399311861.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;790&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba_hu16290109726241488019.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/1b15a6f614ee13c50e03beec1c9851ba_hu7861136560693043153.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe.jpeg&#34;
+	width=&#34;2206&#34;
+	height=&#34;1034&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe_hu15182724829594848012.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ebbccd844fdfbd27db34093509095fbe_hu18078830509092857118.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 获取配置信息
+回到客户端界面，点击客户端前的小加号获取
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6.jpeg&#34;
+	width=&#34;2068&#34;
+	height=&#34;221&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6_hu1573855807907222448.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/0b8f8d615038cb4826b8f32a108291b6_hu14094897193097707303.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;935&#34;
+		data-flex-basis=&#34;2245px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0302-客户端配置&#34;&gt;0x03.02 客户端配置
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;|可以根据自身情况调整
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc.jpeg&#34;
+	width=&#34;1620&#34;
+	height=&#34;1119&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc_hu16764820000433358170.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/4536c25eeb80566ee5e9b0b07a213ffc_hu16247380056522058690.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 使用配置启动&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./npc -server&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;public_ip -vkey&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;miaomiao@123 -type&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;tcp
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346.jpeg&#34;
+	width=&#34;1586&#34;
+	height=&#34;134&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346_hu6509373068069460226.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/b8e83c1fb037373ab5840947e7b10346_hu1060160468600771826.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1183&#34;
+		data-flex-basis=&#34;2840px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 开放防火墙
+&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb.jpeg&#34;
+	width=&#34;1441&#34;
+	height=&#34;368&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb_hu4067112883537137202.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/ba6555c52f62a5c88c1c30634952dadb_hu12138298516289684570.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;391&#34;
+		data-flex-basis=&#34;939px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f.jpeg&#34;
+	width=&#34;1561&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f_hu14429738874391053765.jpeg 480w, https://mi0034.icu/p/nps%E4%BB%A3%E7%90%86/attachment/fe2541b8705ed91e5b1c7ed4122ba69f_hu9580670895181060248.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1076&#34;
+		data-flex-basis=&#34;2583px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x04-补充&#34;&gt;0x04 补充
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;| 需关闭&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;npc stop
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,1477 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="神奇小知识👉又来了👇">
+<title>FRP内网穿透</title>
+
+<link rel='canonical' href='https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/'>
+
+<link rel="stylesheet" href="/scss/style.min.2ca1a90fda9b99db3a71c82ff1948360ddacde646ca6e9a94410f64652d84c86.css"><meta property='og:title' content="FRP内网穿透">
+<meta property='og:description' content="神奇小知识👉又来了👇">
+<meta property='og:url' content='https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/'>
+<meta property='og:site_name' content='MII0&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='端口转发' /><meta property='article:tag' content='内网穿透' /><meta property='article:tag' content='代理' /><meta property='article:tag' content='FRP' /><meta property='article:published_time' content='2024-09-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-09-16T00:00:00&#43;00:00'/><meta property='og:image' content='https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.png' />
+<meta name="twitter:title" content="FRP内网穿透">
+<meta name="twitter:description" content="神奇小知识👉又来了👇"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://mi0034.icu/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover.png' />
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended">
+
+        <div id="article-toolbar" style="position: sticky;top: 10px;z-index: 1000;">
+            <a href="/" class="back-home">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="15 6 9 12 15 18" />
+</svg>
+
+
+
+                <span>返回</span>
+            </a>
+        </div>
+
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#0x0101-项目介绍">0x01.01 项目介绍</a></li>
+    <li><a href="#0x0102-frp-隧道技术介绍">0x01.02 FRP 隧道技术介绍</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0201-下载安装">0x02.01 下载安装</a>
+      <ol>
+        <li><a href="#0x0201a-自动下载-git">0x02.01.A 自动下载 git</a></li>
+        <li><a href="#0x0201b-手动下载">0x02.01.B 手动下载</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0301-服务端一般为内网跳板机或者公网服务器">0x03.01 服务端（一般为内网跳板机或者公网服务器）</a></li>
+    <li><a href="#0x0302-客户端-一般配置在需要穿透的主机上">0x03.02 客户端 (一般配置在需要穿透的主机上)</a></li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0401-环境准备">0x04.01 环境准备</a></li>
+    <li><a href="#0x0402-实验过程">0x04.02 实验过程</a>
+      <ol>
+        <li><a href="#0x0402a-配置">0x04.02.A 配置</a></li>
+        <li><a href="#0x0402b-连接">0x04.02.B 连接</a></li>
+      </ol>
+    </li>
+  </ol>
+
+  <ol>
+    <li><a href="#0x0401-环境准备-1">0x04.01 环境准备</a>
+      <ol>
+        <li><a href="#0x0401a-实验环境">0x04.01.A 实验环境</a></li>
+        <li><a href="#0x0401b-配置">0x04.01.B 配置</a></li>
+      </ol>
+    </li>
+    <li><a href="#0x0402-实验过程-1">0x04.02 实验过程</a>
+      <ol>
+        <li><a href="#0x0402a-连接数据库">0x04.02.A 连接数据库</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+                <img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover_hu16409216579704669409.png"
+                        srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover_hu16409216579704669409.png 800w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/cover_hu6734445289080678528.png 1600w"
+                        width="800" 
+                        height="420" 
+                        loading="lazy"
+                        alt="Featured image of post FRP内网穿透" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="background-color: #2a9d8f; color: #fff;">
+                网络安全
+            </a>
+        
+            <a href="/categories/%E7%BD%91%E7%BB%9C%E7%9F%A5%E8%AF%86/" >
+                网络知识
+            </a>
+        
+            <a href="/categories/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" >
+                内网穿透
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">FRP内网穿透</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            神奇小知识👉又来了👇
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2024-09-16</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="0x01-技术介绍">0x01 技术介绍
+</h1><hr>
+<h2 id="0x0101-项目介绍">0x01.01 项目介绍
+</h2><hr>
+<div style="display: flex; align-items: center; width: 100%;">
+   <a href="https://github.com/fatedier/frp" target="_blank" class="vp-card" style="background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;">
+     <img class="vp-card-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" loading="lazy" alt="Logo" style="margin-right: 15px;">
+     <div class="vp-card-content">
+       <div class="vp-card-title">FRP下载地址：</div>
+       <div class="vp-card-links">https://github.com/fatedier/frp</div>
+       <div class="vp-card-desc"><b>快速反向代理</b></div>
+     </div>
+   </a>
+ </div>
+ 
+ <style>
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: 'Arial', sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   </style>
+
+<p>项目介绍：快速反向代理，帮助用户将 NAT 或防火墙后面的本地服务器暴露给 Internet</p>
+<h2 id="0x0102-frp-隧道技术介绍">0x01.02 FRP 隧道技术介绍
+</h2><hr>
+<p>| frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议，且支持 P2P 通信</p>
+<p>在 FRP 中，一个代理对应一个需要公开访问的内网服务。一个客户端可以同时配置多个代理，以满足不同的需求。</p>
+<h1 id="0x02-环境文件准备">0x02 环境&amp;文件准备
+</h1><hr>
+<p>安装环境：Ubuntu Server 24.0LTS
+FRP 版本： 最新</p>
+<h2 id="0x0201-下载安装">0x02.01 下载安装
+</h2><hr>
+<h3 id="0x0201a-自动下载-git">0x02.01.A 自动下载 git
+</h3><hr>
+<p>使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://gitclone.com/github.com/fatedier/frp.git
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed.jpeg"
+	width="1616"
+	height="1206"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed_hu8090329514649159794.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41ba2291ecbec63f9e509234f0a036ed_hu14641504630179656630.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="321px"
+	
+></p>
+<p>进入目录：
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd.jpeg"
+	width="1607"
+	height="1202"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd_hu8965502563275225439.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/8740830342698f442fa0e3387f799dfd_hu12249774820000087469.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<h3 id="0x0201b-手动下载">0x02.01.B 手动下载
+</h3><hr>
+<p>手动文件下载：
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb.jpeg"
+	width="2530"
+	height="1184"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb_hu17382559121512764302.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/e9858142c01fcd9fdfa53451986eaacb_hu9827935730125883927.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="213"
+		data-flex-basis="512px"
+	
+></p>
+<p>选择对应版本下载，解压，进入对应目录</p>
+<p>Wget:
+Linux 下还可以用 wget 程序下载文件
+使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://github.com/fatedier/frp/releases/download/v0.60.0/frp_0.60.0_linux_amd64.tar.gz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9.jpeg"
+	width="1611"
+	height="1199"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9_hu1970666543968698027.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/bac3e067e81941d48d496113b98488c9_hu12161360893280925670.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="322px"
+	
+></p>
+<p>之后解压：
+使用命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tar -zxvf 对应文件名.tar.gz 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>之后进入对应目录
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b.jpeg"
+	width="1615"
+	height="436"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b_hu3809296441771033643.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/41f77f3eae593c22e273634925f9b09b_hu18232319635006286247.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="370"
+		data-flex-basis="888px"
+	
+></p>
+<h1 id="0x03-配置编辑服务运行">0x03 配置编辑&amp;服务运行
+</h1><hr>
+<p>文件目录结构：
+| 主要就编辑两个配置文件</p>
+<p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16.jpeg"
+	width="1613"
+	height="1196"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16_hu1290848668554391477.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d657cddfc8b5e955f0d5904165873b16_hu1385820365987386357.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="323px"
+	
+></p>
+<h2 id="0x0301-服务端一般为内网跳板机或者公网服务器">0x03.01 服务端（一般为内网跳板机或者公网服务器）
+</h2><hr>
+<p>运行命令：
+| 旧版配置文件名叫 frps.ini</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 给运行权限</span>
+</span></span><span class="line"><span class="cl">chmod +x frps
+</span></span><span class="line"><span class="cl"><span class="c1">#运行</span>
+</span></span><span class="line"><span class="cl">./frps -c ./frps.toml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># frps.toml  </span>
+</span></span><span class="line"><span class="cl"><span class="nv">bindPort</span> <span class="o">=</span> <span class="m">7000</span> <span class="c1"># 服务端与客户端通信端口  </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">transport.tls.force <span class="o">=</span> <span class="nb">true</span> <span class="c1"># 服务端将只接受 TLS链接  </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">auth.token <span class="o">=</span> <span class="s2">&#34;public&#34;</span> <span class="c1"># 身份验证令牌，frpc要与frps一致  </span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9.jpeg"
+	width="1615"
+	height="1208"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9_hu4257714533849046737.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/0fcc30d996797a1cc3e3be5393974de9_hu4330824900091730428.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<h2 id="0x0302-客户端-一般配置在需要穿透的主机上">0x03.02 客户端 (一般配置在需要穿透的主机上)
+</h2><hr>
+<p>运行命令：
+| 旧版配置文件名叫 frpc.ini</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 给运行权限</span>
+</span></span><span class="line"><span class="cl">chmod +x frpc
+</span></span><span class="line"><span class="cl"><span class="c1">#运行</span>
+</span></span><span class="line"><span class="cl">./frpc -c ./frpc.toml
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># frpc.toml  </span>
+</span></span><span class="line"><span class="cl">transport.tls.enable <span class="o">=</span> <span class="nb">true</span> <span class="c1"># 从 v0.50.0版本开始，transport.tls.enable的默认值为 true  </span>
+</span></span><span class="line"><span class="cl"><span class="nv">serverAddr</span> <span class="o">=</span> <span class="s2">&#34;x.x.x.x&#34;</span>  <span class="c1">#自己的公网地址</span>
+</span></span><span class="line"><span class="cl"><span class="nv">serverPort</span> <span class="o">=</span> <span class="m">7000</span> <span class="c1"># 公网服务端通信端口  </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">auth.token <span class="o">=</span> <span class="s2">&#34;public&#34;</span> <span class="c1"># 令牌，与公网服务端保持一致  </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="o">[[</span>proxies<span class="o">]]</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;ssh&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">type</span> <span class="o">=</span> <span class="s2">&#34;tcp&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">localIP</span> <span class="o">=</span> <span class="s2">&#34;127.0.0.1&#34;</span> <span class="c1"># 需要暴露的服务的IP  </span>
+</span></span><span class="line"><span class="cl"><span class="nv">localPort</span> <span class="o">=</span> <span class="m">22</span> <span class="c1"># 将本地22端口的服务暴露在公网的6666端口  </span>
+</span></span><span class="line"><span class="cl"><span class="nv">remotePort</span> <span class="o">=</span> <span class="m">6666</span> <span class="c1"># 暴露服务的公网入口  </span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="o">[[</span>proxies<span class="o">]]</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">name</span> <span class="o">=</span> <span class="s2">&#34;web&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="nb">type</span> <span class="o">=</span> <span class="s2">&#34;tcp&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">localIP</span> <span class="o">=</span> <span class="s2">&#34;127.0.0.1&#34;</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">localPort</span> <span class="o">=</span> <span class="m">80</span>  
+</span></span><span class="line"><span class="cl"><span class="nv">remotePort</span> <span class="o">=</span> <span class="m">8888</span>  
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="0x04-拓展_二层代理实操">0x04 拓展_二层代理实操
+</h1><hr>
+<h2 id="0x0401-环境准备">0x04.01 环境准备
+</h2><hr>
+<blockquote>
+<p>[!tip] 内网两台主机需要互通</p>
+</blockquote>
+<p>实验环境：</p>
+<ol>
+<li>攻击机</li>
+<li>公网服务器</li>
+<li>内网靶机一（出网，已攻陷）192.168.31.200</li>
+<li>内网靶机二（不出网）192.168.31.6</li>
+</ol>
+<p>实验流程：内网靶机二 22端口映射到内网靶机一 2222端口，最后出网到公网服务器 3559 端口，攻击机连接</p>
+<h2 id="0x0402-实验过程">0x04.02 实验过程
+</h2><hr>
+<h3 id="0x0402a-配置">0x04.02.A 配置
+</h3><p>靶机一配置：
+| 配置客户端连接公网服务器
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7.jpeg"
+	width="1619"
+	height="1195"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7_hu14825306123420665060.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9f194b2edfe6f5e3afb261dd1dd53ce7_hu13924638639041465216.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+></p>
+<p>| 配置服务端，留给靶机二连接
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef.jpeg"
+	width="1612"
+	height="1172"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef_hu17618227990254953307.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/414a71d60a205f6163e70d48fd0faeef_hu2022464780138505224.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="137"
+		data-flex-basis="330px"
+	
+></p>
+<p>靶机一配置：
+| 客户端配置
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb.jpeg"
+	width="1617"
+	height="1204"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb_hu7386432810571717148.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/9b2b0420d753946512121fd235c66adb_hu9268802561200403804.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="134"
+		data-flex-basis="322px"
+	
+></p>
+<p>公网服务端配置：将端口在防火墙放开，配置文件添加对应端口</p>
+<h3 id="0x0402b-连接">0x04.02.B 连接
+</h3><hr>
+<p>| 启动靶机一的客户端,服务端
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28.jpeg"
+	width="1621"
+	height="214"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28_hu8069797012060632293.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/c4f33e2c070640195bd91613e65c8f28_hu6869845524909284441.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="757"
+		data-flex-basis="1817px"
+	
+>
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5.jpeg"
+	width="1238"
+	height="318"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5_hu11299753884591950655.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b49f075201adc8fc52ad3bc80fb0d0f5_hu15073755134195090533.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="389"
+		data-flex-basis="934px"
+	
+></p>
+<p>| 启动靶机二的客户端
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4.jpeg"
+	width="1621"
+	height="368"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4_hu1840285670902660960.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/7c08138a82a6ce22a2f6bde92669a6a4_hu17330434117846178510.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="440"
+		data-flex-basis="1057px"
+	
+>
+查看靶机一日志
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81.jpeg"
+	width="1614"
+	height="135"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81_hu9325788249849925856.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/de3961a590a2569d197f87674a807a81_hu17324411660983475349.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1195"
+		data-flex-basis="2869px"
+	
+></p>
+<p>| 使用公网地址连接
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6_hu2317533328444787185.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a37b4397e0d0c921c339755041bea1e6_hu16892105052428887444.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>连接成功，执行命令</p>
+<h1 id="0x05-拓展_二层代理实操_2">0x05 拓展_二层代理实操_2
+</h1><h2 id="0x0401-环境准备-1">0x04.01 环境准备
+</h2><hr>
+<blockquote>
+<p>[!tip] 内网两台主机需要互通</p>
+</blockquote>
+<h3 id="0x0401a-实验环境">0x04.01.A 实验环境
+</h3><hr>
+<ol>
+<li>攻击机 (kali)</li>
+<li>公网服务器</li>
+<li>内网靶机一（出网，已攻陷）192.168.0.2|10.0.0.3</li>
+<li>内网靶机二（不出网）10.0.0.2</li>
+</ol>
+<p>实验流程：靶机一是双网卡主机联通两个网段，靶机二不出网，并设置有数据库</p>
+<h3 id="0x0401b-配置">0x04.01.B 配置
+</h3><hr>
+<blockquote>
+<p>[!tip] 此次实验环境使用 docker 配置</p>
+</blockquote>
+<p><strong>Docker：</strong>
+目录结构：
+project/
+├── docker-compose.yml
+├── Dockerfile.First_layer
+├── Dockerfile.Second_layer
+├── init.sql</p>
+<p>运行命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 启动!！</span>
+</span></span><span class="line"><span class="cl">docker compose up -d
+</span></span><span class="line"><span class="cl"><span class="c1"># 查看状态</span>
+</span></span><span class="line"><span class="cl">docker ps
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>配置内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># docker-compose.yml </span>
+</span></span><span class="line"><span class="cl">version: <span class="s1">&#39;3.8&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  first_layer:
+</span></span><span class="line"><span class="cl">    build: 
+</span></span><span class="line"><span class="cl">      context: .
+</span></span><span class="line"><span class="cl">      dockerfile: Dockerfile.first_layer
+</span></span><span class="line"><span class="cl">    container_name: first_layer
+</span></span><span class="line"><span class="cl">    tty: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    stdin_open: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      external_net:
+</span></span><span class="line"><span class="cl">        ipv4_address: 192.168.0.2
+</span></span><span class="line"><span class="cl">      internal_net:
+</span></span><span class="line"><span class="cl">        aliases:
+</span></span><span class="line"><span class="cl">          - first_layer
+</span></span><span class="line"><span class="cl">    ports:
+</span></span><span class="line"><span class="cl">      - <span class="s2">&#34;2222:22&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  second_layer:
+</span></span><span class="line"><span class="cl">    build: 
+</span></span><span class="line"><span class="cl">      context: .
+</span></span><span class="line"><span class="cl">      dockerfile: Dockerfile.second_layer
+</span></span><span class="line"><span class="cl">    container_name: second_layer
+</span></span><span class="line"><span class="cl">    tty: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    stdin_open: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    networks:
+</span></span><span class="line"><span class="cl">      internal_net:
+</span></span><span class="line"><span class="cl">        ipv4_address: 10.0.0.2
+</span></span><span class="line"><span class="cl">    environment:
+</span></span><span class="line"><span class="cl">      MYSQL_ROOT_PASSWORD: root@123
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">volumes:
+</span></span><span class="line"><span class="cl">  mysql_data:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">networks:
+</span></span><span class="line"><span class="cl">  external_net:
+</span></span><span class="line"><span class="cl">    driver: bridge
+</span></span><span class="line"><span class="cl">    ipam:
+</span></span><span class="line"><span class="cl">      driver: default
+</span></span><span class="line"><span class="cl">      config:
+</span></span><span class="line"><span class="cl">        - subnet: 192.168.0.0/24
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  internal_net:
+</span></span><span class="line"><span class="cl">    driver: bridge
+</span></span><span class="line"><span class="cl">    ipam:
+</span></span><span class="line"><span class="cl">      driver: default
+</span></span><span class="line"><span class="cl">      config:
+</span></span><span class="line"><span class="cl">        - subnet: 10.0.0.0/24
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Dockerfile.first_layer</span>
+</span></span><span class="line"><span class="cl">FROM ubuntu:latest
+</span></span><span class="line"><span class="cl">RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y wget openssh-server
+</span></span><span class="line"><span class="cl">RUN wget https://github.com/fatedier/frp/releases/download/v0.38.0/frp_0.38.0_linux_amd64.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    tar -zxvf frp_0.38.0_linux_amd64.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mv frp_0.38.0_linux_amd64/frp /usr/local/bin/ <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm -rf frp_0.38.0_linux_amd64.tar.gz frp_0.38.0_linux_amd64
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH配置</span>
+</span></span><span class="line"><span class="cl">RUN mkdir /var/run/sshd
+</span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s1">&#39;root:root&#39;</span> <span class="p">|</span> chpasswd
+</span></span><span class="line"><span class="cl">RUN sed -i <span class="s1">&#39;s/#PermitRootLogin prohibit-password/PermitRootLogin yes/&#39;</span> /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl"><span class="c1"># SSH登录修复</span>
+</span></span><span class="line"><span class="cl">RUN sed -i <span class="s1">&#39;s@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g&#39;</span> /etc/pam.d/sshd
+</span></span><span class="line"><span class="cl">EXPOSE <span class="m">22</span>
+</span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;/usr/sbin/sshd&#34;</span>, <span class="s2">&#34;-D&#34;</span><span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Dockerfile.second_layer</span>
+</span></span><span class="line"><span class="cl">FROM ubuntu:latest
+</span></span><span class="line"><span class="cl">RUN apt-get update <span class="o">&amp;&amp;</span> apt-get install -y mysql-server wget
+</span></span><span class="line"><span class="cl">RUN wget https://github.com/fatedier/frp/releases/download/v0.38.0/frp_0.38.0_linux_amd64.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    tar -zxvf frp_0.38.0_linux_amd64.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mv frp_0.38.0_linux_amd64/frp /usr/local/bin/ <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm -rf frp_0.38.0_linux_amd64.tar.gz frp_0.38.0_linux_amd64
+</span></span><span class="line"><span class="cl"><span class="c1"># MySQL配置</span>
+</span></span><span class="line"><span class="cl">ENV <span class="nv">MYSQL_ROOT_PASSWORD</span><span class="o">=</span>root@123
+</span></span><span class="line"><span class="cl">COPY init.sql /docker-entrypoint-initdb.d/
+</span></span><span class="line"><span class="cl">EXPOSE <span class="m">3306</span>
+</span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;mysqld&#34;</span><span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># init.sql</span>
+</span></span><span class="line"><span class="cl">CREATE DATABASE IF NOT EXISTS exampledb<span class="p">;</span>
+</span></span><span class="line"><span class="cl">GRANT ALL PRIVILEGES ON exampledb.* TO <span class="s1">&#39;exampleuser&#39;</span>@<span class="s1">&#39;%&#39;</span> IDENTIFIED BY <span class="s1">&#39;examplepassword&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">FLUSH PRIVILEGES<span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1.jpeg"
+	width="1853"
+	height="203"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1_hu8008940952384053939.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/d2c389e033dc6c6bc915ba88fc78d3a1_hu16042325639454203156.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="912"
+		data-flex-basis="2190px"
+	
+></p>
+<p><strong>frp:</strong>
+ssh 连接：
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94_hu5081155343398985298.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/a9865eefad060fc71470f4c1b0411b94_hu10425620147294109536.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>查看网卡信息：
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d_hu13391418708645146337.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/797d122657a86d6c275ca41a54d1b45d_hu13940860392452240571.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+>
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5_hu349334906934803144.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/89bc16e9ff3599cd555e1a72fde2e2e5_hu8433017128249423193.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+>
+可互通：
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b.jpeg"
+	width="1134"
+	height="415"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b_hu11001135250687986612.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/359e0866b4f94c7ec86ff1b060e9ca0b_hu3071218541932356118.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="273"
+		data-flex-basis="655px"
+	
+></p>
+<p>分别配置 frp:
+| 靶机 2 客户端
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946_hu13524057122015464249.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b1b1392ab0bb278120ee094ce9fa1946_hu11771469096471020467.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>| 靶机 1 客户端/服务端
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10_hu1798310226990057097.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/2464c27b001870ca15d96b46d7a87b10_hu15759404697047738720.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+>
+<img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793.jpeg"
+	width="1850"
+	height="954"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793_hu9851492831637391192.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/b7e9d9cb236fb7d8489c48f1cd768793_hu10926267436014805468.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<h2 id="0x0402-实验过程-1">0x04.02 实验过程
+</h2><hr>
+<h3 id="0x0402a-连接数据库">0x04.02.A 连接数据库
+</h3><p><img src="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950.jpeg"
+	width="1173"
+	height="1033"
+	srcset="/p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950_hu10803471062423899574.jpeg 480w, /p/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/attachment/1f539009c440270c76cf4f9191c94950_hu10920984181234317751.jpeg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="113"
+		data-flex-basis="272px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E7%AB%AF%E5%8F%A3%E8%BD%AC%E5%8F%91/">端口转发</a>
+        
+            <a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>
+        
+            <a href="/tags/%E4%BB%A3%E7%90%86/">代理</a>
+        
+            <a href="/tags/frp/">FRP</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/ew%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ew%E4%BB%A3%E7%90%86/cover.b6f39c2c041aa06c712c943e1f333e0b_hu7679812124843827805.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post EW代理"
+                        
+                        data-hash="md5-tvOcLAQaoGxxLJQ&#43;HzM&#43;Cw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">EW代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/nps%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/nps%E4%BB%A3%E7%90%86/cover.4acab2c523854794e61723becc0becd3_hu10683080851496780836.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post NPS代理"
+                        
+                        data-hash="md5-SsqyxSOFR5TmFyO&#43;zAvs0w==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">NPS代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neo-regeorg%E4%BB%A3%E7%90%86/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neo-regeorg%E4%BB%A3%E7%90%86/cover.af94c7f87e2fce56393580d3feb8dc01_hu12624667778332561087.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Neo-reGeorg代理"
+                        
+                        data-hash="md5-r5TH&#43;H4vzlY5NYDT/rjcAQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Neo-reGeorg代理</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/ssh%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/ssh%E9%9A%A7%E9%81%93/cover.d55baa30e02b6d6a37a57d67583ac285_hu9104437600191226121.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post SSH隧道"
+                        
+                        data-hash="md5-1VuqMOArbWo3pX1nWDrChQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SSH隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/suo5%E9%9A%A7%E9%81%93/">
+        
+        
+            <div class="article-image">
+                <img src="/p/suo5%E9%9A%A7%E9%81%93/cover.b787f1861789ad680abb7b4831e61804_hu934676597337776263.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post suo5隧道"
+                        
+                        data-hash="md5-t4fxhheJrWgKu3tIMeYYBA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">suo5隧道</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="klopiop/klopiop.github.io"
+    data-repo-id="R_kgDOMxDnIA"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOMxDnIM4Cib9E"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2024 MII0&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-packages"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M2 13.5v5.5l5 3" /><path d="M7 16.545l5 -3.03" /><path d="M17 16.5l-5 -3l5 -3l5 3v5.5l-5 3z" /><path d="M12 19l5 3" /><path d="M17 16.5l5 -3" /><path d="M12 13.5v-5.5l-5 -3l5 -3l5 3v5.5" /><path d="M7 5.03v5.455" /><path d="M12 8l5 -3" /></svg> INP-xx-001-MII0 <br/>
+        
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+    
+    <script>
+        function cardLink() {
+          let $cardLinks = document.querySelectorAll('.card-link');
+          if ($cardLinks.length === 0) {
+            return;
+          }
+          
+          let $linkStyle = document.createElement('style');
+          $linkStyle.innerHTML =
+            '.card-link,.card-link:hover{text-decoration:none;border:none!important;color:inherit!important}' +
+            '.card-link{position:relative;display:block;margin:1em auto;width:390px;box-sizing:border-box;border-radius:12px;max-width:100%;overflow:hidden;color:inherit;text-decoration:none}' +
+            '.card-link-backdrop{position:absolute;top:0;left:0;right:0;bottom:0;background-image:url(/images/card-link-bg.jpg);background-repeat:no-repeat;-webkit-filter:blur(20px);filter:blur(20px);background-size:cover;background-position:center}' +
+            '.card-link-content{position:relative;display:flex;align-items:center;justify-content:space-between;padding:12px;border-radius:inherit;background-color:rgba(246,246,246,0.88)}' +
+            '.card-link-text{overflow:hidden}' +
+            '.card-link-title{display:-webkit-box;-webkit-line-clamp:2;overflow:hidden;text-overflow:ellipsis;max-height:calc(16px * 1.25 * 2);font-size:16px;font-weight:500;line-height:1.25;color:#1a1a1a}' +
+            '.card-link-meta{display:flex;margin-top:4px;font-size:14px;line-height:20px;color:#999;white-space:nowrap}' +
+            '.card-link-url{display: inline-flex;align-items: center;}' +
+            '.card-link-imageCell{margin-left:8px;border-radius:6px}' +
+            '.card-link-image{display:block;width:60px;height:60px;border-radius:inherit}';
+          document.querySelector('body').appendChild($linkStyle);
+        
+          
+          for (let $cardLink of $cardLinks) {
+            let $title = $cardLink.querySelector('.card-link-title').innerText;
+            let $url = $cardLink.getAttribute('href');
+            let $imgUrl = $cardLink.getAttribute('data-img');
+            let $imageHtml = $imgUrl ? `<span class='card-link-imageCell'><img class='card-link-image' src='${$imgUrl}' alt='icon'></span>` : '';
+        
+            $cardLink.innerHTML = `
+              <span class='card-link-backdrop'></span>
+              <span class='card-link-content'>
+                <span class='card-link-text'>
+                  <span class='card-link-title'>${$title}</span>
+                  <span class='card-link-meta'>
+                    <span class='card-link-url'><svg class='Zi Zi--InsertLink' fill='currentColor' viewBox='0 0 24 24' width='17' height='17'>...</svg>${$url}</span>
+                  </span>
+                </span>
+                ${$imageHtml}
+              </span>
+            `;
+          }
+        }
+        window.onload = () => {
+          cardLink();
+        };
+    </script>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous" defer></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js" integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo=" crossorigin="anonymous" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js" integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU=" crossorigin="anonymous" defer></script>
+    </body>
+</html>

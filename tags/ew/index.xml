@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>EW on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/ew/</link>
+        <description>Recent content in EW on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Mon, 16 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/ew/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>EW代理</title>
+        <link>https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/</link>
+        <pubDate>Mon, 16 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/cover.png" alt="Featured image of post EW代理" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+  &lt;a href=&#34;https://github.com/idlefire/ew#/&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+    &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+    &lt;div class=&#34;vp-card-content&#34;&gt;
+      &lt;div class=&#34;vp-card-title&#34;&gt;EW下载地址：&lt;/div&gt;
+      &lt;div class=&#34;vp-card-links&#34;&gt;https://github.com/idlefire/ew#/&lt;/div&gt;
+      &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;内网穿透&lt;/b&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .cards-container {
+      display: flex;
+      justify-content: center;  
+    }
+    
+    .vp-card {
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 120px;  
+      max-height: 120px;  
+    }
+    
+  .vp-card {
+    display: flex;
+    align-items: center;  
+    background: #ffffff;  
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #eaeaea;  
+    border-radius: 25px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: &#39;Arial&#39;, sans-serif;  
+    position: relative;  
+  }
+  
+  .vp-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+  }
+  
+  .vp-card-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    object-fit: cover;  
+    margin-left: 25px
+  }
+  
+  .vp-card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;  
+    flex-grow: 1;
+    position: relative;  
+  }
+  
+  .vp-card-content::before {
+    content: &#39;&#39;;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;  
+    border-left: 2px dashed #eaeaea;  
+    z-index: 1;  
+  }
+  
+  .vp-card-title {
+    font-size: 2.0rem;  
+    color: #1a0dab;  
+    margin-bottom: 8px;  
+    line-height: 1;  
+    font-weight: bold;  
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+    -webkit-background-clip: text;  
+    background-clip: text;  
+    color: transparent;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+  }
+  
+  .vp-card-links {
+      font-size: 12px;  
+      color: #5f6368;  
+      margin-bottom: 8px;  
+      line-height: 1.4;  
+      text-decoration: none;  
+      transition: color 0.3s ease;  
+      white-space: nowrap;  
+      overflow: hidden;  
+      text-overflow: ellipsis;  
+    }
+  
+  .vp-card-links:hover {
+    color: #1a0dab;  
+  }
+  
+  .vp-card-desc {
+    font-size: 1.4rem;  
+    color: #666;  
+    line-height: 1.6;  
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #eaeaea;  
+    margin: 14px 0;  
+  }
+  
+  @media (min-width: 600px) {
+      .vp-card {
+        flex: 1 1 250px;  
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .vp-card {
+        flex: 1 1 150px;  
+        max-width: 100%;  
+      }
+    }
+  &lt;/style&gt;
+
+&lt;p&gt;项目介绍：EarthWorm 是一款用于开启 SOCKS v5 代理服务的工具，基于标准 C 开发，可提供多平台间的转接通讯，用于复杂网络环境下的数据转发。&lt;/p&gt;
+&lt;h2 id=&#34;0x0102-ew-技术介绍&#34;&gt;0x01.02 EW 技术介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;全称：Earthworm
+实现流程：
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93.jpeg&#34;
+	width=&#34;810&#34;
+	height=&#34;600&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu4471814556839221325.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/4fa1c0c0d6cc96791c906de3a9505b93_hu17046947134241356879.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;324px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;优点：可执行文件，以适用不同的操作系统，Linux、Windows、MacOS、Arm-Linux 均被包括其内，还支持多级级联&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0LTS
+EW 版本： 最新（8 年前了）&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h3 id=&#34;0x0201a-自动下载-git&#34;&gt;0x02.01.A 自动下载 git
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;使用命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone https://gitclone.com/github.com/idlefire/ew.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39.jpeg&#34;
+	width=&#34;1602&#34;
+	height=&#34;198&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu10589173252350944881.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/08cd7f60c38a1bd53d2b03cd52612b39_hu2888941450667944309.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;809&#34;
+		data-flex-basis=&#34;1941px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;进入目录：
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd.jpeg&#34;
+	width=&#34;1609&#34;
+	height=&#34;1209&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu6515886124420246988.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/f51466395a15d8cd76b4002382c1fddd_hu15672659711350708679.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;319px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;0x0201b-手动下载&#34;&gt;0x02.01.B 手动下载
+&lt;/h3&gt;&lt;hr&gt;
+&lt;p&gt;手动文件下载：
+|选择对应的版本使用
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f.jpeg&#34;
+	width=&#34;739&#34;
+	height=&#34;564&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu13505232627668769119.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/5ab8c564977f2b269b6e8eec177efb8f_hu2624512055136412697.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;314px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-配置编辑服务运行&#34;&gt;0x03 配置编辑&amp;amp;服务运行
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x-0301-普通网络环境&#34;&gt;0x 03.01 普通网络环境
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;有公网：&lt;/strong&gt;
+拓扑：
+攻击机-&amp;raquo;靶机&lt;/p&gt;
+&lt;p&gt;在目标靶机上使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s ssocksd -l &lt;span class=&#34;m&#34;&gt;1022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;演示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f.jpeg&#34;
+	width=&#34;1073&#34;
+	height=&#34;873&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu10788756764759740930.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/a4affe67ffbe2edd8f1a54f810da122f_hu6511649281130936512.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;294px&#34;
+	
+&gt;
+使用 proxyfier, 连接成功
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968.jpeg&#34;
+	width=&#34;914&#34;
+	height=&#34;556&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu1056649741964825504.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/fbdc5873469a340dd7565fbc16b34968_hu13725304950990846142.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;394px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;无公网：&lt;/strong&gt;
+拓扑：
+攻击机-&amp;raquo;公网跳板(/)&amp;laquo;-内网靶机 (192.168.0.2)&lt;/p&gt;
+&lt;p&gt;在公网跳板机上使用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s rcsocks -l &lt;span class=&#34;m&#34;&gt;1022&lt;/span&gt; -e &lt;span class=&#34;m&#34;&gt;10022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在内网靶机&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;./ew -s rssocks -d public_ip -e &lt;span class=&#34;m&#34;&gt;10022&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;此时公网主机通过接受 1080 端口请求，发送给 8888 端口，内网主机接收 8888 端口&lt;/p&gt;
+&lt;p&gt;演示：&lt;/p&gt;
+&lt;p&gt;| 内网主机开启
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu16896199396918979259.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/499d4e7ffc83e4f390ec0c9530734762_hu11404953662209182711.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 公网主机开启
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3.jpeg&#34;
+	width=&#34;977&#34;
+	height=&#34;336&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu5713723057775979420.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/ab2496fe0b9c4808cf5273d6de4302a3_hu6822426150365664295.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;290&#34;
+		data-flex-basis=&#34;697px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 攻击机测试
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06.jpeg&#34;
+	width=&#34;918&#34;
+	height=&#34;603&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu11003598558608821060.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/c995d920cf27f9febb650ec1b3904e06_hu6846341995782979870.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe.jpeg&#34;
+	width=&#34;1046&#34;
+	height=&#34;295&#34;
+	srcset=&#34;https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu5187385374854465522.jpeg 480w, https://mi0034.icu/p/ew%E4%BB%A3%E7%90%86/attachment/6009bc3584d8c72cc753da3272d9debe_hu7285563567119342730.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;354&#34;
+		data-flex-basis=&#34;850px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x-0302-二重网络环境&#34;&gt;0x 03.02 二重网络环境
+&lt;/h2&gt;&lt;p&gt;| 搭建方法类同&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

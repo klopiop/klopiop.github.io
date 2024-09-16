@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Suo5 on MII0&#39;s Blog</title>
+        <link>https://mi0034.icu/tags/suo5/</link>
+        <description>Recent content in Suo5 on MII0&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>MII0&#39;s Blog</copyright>
+        <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://mi0034.icu/tags/suo5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>suo5隧道</title>
+        <link>https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/</link>
+        <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/</guid>
+        <description>&lt;img src="https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/cover.png" alt="Featured image of post suo5隧道" /&gt;&lt;h1 id=&#34;0x01-技术介绍&#34;&gt;0x01 技术介绍
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0101-项目介绍&#34;&gt;0x01.01 项目介绍
+&lt;/h2&gt;&lt;hr&gt;
+&lt;div style=&#34;display: flex; align-items: center; width: 100%;&#34;&gt;
+   &lt;a href=&#34;#ZgotmplZ&#34; target=&#34;_blank&#34; class=&#34;vp-card&#34; style=&#34;background: rgb(255, 255, 255); width: 100%; text-decoration: none; color: inherit;&#34;&gt;
+     &lt;img class=&#34;vp-card-logo&#34; src=&#34;https://avatars.githubusercontent.com/u/20637881?s=48&amp;amp;v=4&#34; loading=&#34;lazy&#34; alt=&#34;Logo&#34; style=&#34;margin-right: 15px;&#34;&gt;
+     &lt;div class=&#34;vp-card-content&#34;&gt;
+       &lt;div class=&#34;vp-card-title&#34;&gt;suo5下载地址：&lt;/div&gt;
+       &lt;div class=&#34;vp-card-links&#34;&gt; https://github.com/zema1/suo5#/&lt;/div&gt;
+       &lt;div class=&#34;vp-card-desc&#34;&gt;&lt;b&gt;一款高性能 HTTP 代理隧道工具&lt;/b&gt;&lt;/div&gt;
+     &lt;/div&gt;
+   &lt;/a&gt;
+ &lt;/div&gt;
+ 
+ &lt;style&gt;
+   .cards-container {
+       display: flex;
+       justify-content: center;  
+     }
+     
+     .vp-card {
+       margin-left: auto;
+       margin-right: auto;
+       min-height: 120px;  
+       max-height: 120px;  
+     }
+     
+   .vp-card {
+     display: flex;
+     align-items: center;  
+     background: #ffffff;  
+     width: 100%;
+     max-width: 300px;
+     border: 1px solid #eaeaea;  
+     border-radius: 25px;  
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+     overflow: hidden;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     font-family: &#39;Arial&#39;, sans-serif;  
+     position: relative;  
+   }
+   
+   .vp-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  
+   }
+   
+   .vp-card-logo {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;  
+     object-fit: cover;  
+     margin-left: 25px
+   }
+   
+   .vp-card-content {
+     display: flex;
+     flex-direction: column;
+     padding: 16px;  
+     flex-grow: 1;
+     position: relative;  
+   }
+   
+   .vp-card-content::before {
+     content: &#39;&#39;;
+     position: absolute;
+     top: 0;
+     bottom: 0;
+     left: 10px;  
+     border-left: 2px dashed #eaeaea;  
+     z-index: 1;  
+   }
+   
+   .vp-card-title {
+     font-size: 2.0rem;  
+     color: #1a0dab;  
+     margin-bottom: 8px;  
+     line-height: 1;  
+     font-weight: bold;  
+     background-image: linear-gradient(to right, #ff7e5f, #feb47b);  
+     -webkit-background-clip: text;  
+     background-clip: text;  
+     color: transparent;  
+     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;  
+   }
+   
+   .vp-card-links {
+       font-size: 12px;  
+       color: #5f6368;  
+       margin-bottom: 8px;  
+       line-height: 1.4;  
+       text-decoration: none;  
+       transition: color 0.3s ease;  
+       white-space: nowrap;  
+       overflow: hidden;  
+       text-overflow: ellipsis;  
+     }
+   
+   .vp-card-links:hover {
+     color: #1a0dab;  
+   }
+   
+   .vp-card-desc {
+     font-size: 1.4rem;  
+     color: #666;  
+     line-height: 1.6;  
+   }
+   
+   hr {
+     border: 0;
+     height: 1px;
+     background-color: #eaeaea;  
+     margin: 14px 0;  
+   }
+   
+   @media (min-width: 600px) {
+       .vp-card {
+         flex: 1 1 250px;  
+       }
+     }
+     
+     @media (max-width: 599px) {
+       .vp-card {
+         flex: 1 1 150px;  
+         max-width: 100%;  
+       }
+     }
+   &lt;/style&gt;
+
+&lt;p&gt;项目介绍：一款高性能 HTTP 代理隧道工具，属于对网站端口的复用吧，走的 TCP 协议&lt;/p&gt;
+&lt;h1 id=&#34;0x02-环境文件准备&#34;&gt;0x02 环境&amp;amp;文件准备
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;安装环境：Ubuntu Server 24.0 LTS | tomcat
+suo5 版本： 最新&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 选择适合的版本
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd.jpeg&#34;
+	width=&#34;1843&#34;
+	height=&#34;1164&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd_hu13831829915192418249.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/f5859d713af682955a12aadb19c686dd_hu797359139145728866.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 服务端有普通技术栈和 java 技术栈两个选择
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2.jpeg&#34;
+	width=&#34;1813&#34;
+	height=&#34;914&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2_hu6933501410788874878.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/7a9a41cd3a0e05c9dc1ff9b3475f10d2_hu7381431256525268518.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;476px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0201-下载安装-1&#34;&gt;0x02.01 下载安装
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| windows 可以直接使用 gui 客户端
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1.jpeg&#34;
+	width=&#34;1398&#34;
+	height=&#34;823&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1_hu7342265087553926136.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/cac4e7ba89949dfcb95779cd70bb17a1_hu9920305332055989713.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;0x03-开始代理&#34;&gt;0x03 开始代理
+&lt;/h1&gt;&lt;hr&gt;
+&lt;h2 id=&#34;0x0301-正向代理&#34;&gt;0x03.01 正向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 上传之后连接
+这里使用 CVE-2017-12615 漏洞环境测试
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54.jpeg&#34;
+	width=&#34;1850&#34;
+	height=&#34;954&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54_hu5118041160496023204.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/d0eaab0b60d08e082757d98d088e3d54_hu15770616424223474452.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c.jpeg&#34;
+	width=&#34;1842&#34;
+	height=&#34;90&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c_hu4943408286685752984.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/65f0e16444d2ceb5b3393d8cd32cce7c_hu8678875884310876814.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;2046&#34;
+		data-flex-basis=&#34;4912px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 看看网页情况，tomcat 7.0.79
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1238&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb_hu8999442627103351647.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/50284f04bd749d60484b0f3fd6d8d2cb_hu7675446114243241378.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;496px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 上传 suo5 的文件
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403.jpeg&#34;
+	width=&#34;2560&#34;
+	height=&#34;1368&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403_hu9114154959373989721.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/851a93cd2eb9fddbd5a35b032232a403_hu8996972028683812276.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;449px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;| 成功连接
+&lt;img src=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818.jpeg&#34;
+	width=&#34;998&#34;
+	height=&#34;1144&#34;
+	srcset=&#34;https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818_hu3655168238346839845.jpeg 480w, https://mi0034.icu/p/suo5%E9%9A%A7%E9%81%93/attachment/3fff3f057dba5733f9175656942c6818_hu70968332121164436.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;0x0301-反向代理&#34;&gt;0x03.01 反向代理
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;| 在 Nginx+Tomcat 环境中呢，Nginx 处理 &lt;code&gt;Chunked-Encoding&lt;/code&gt; 类型的 Body 时会缓存 Body 的情况下，Suo5 也能够通过特定的响应头 &lt;code&gt;X-Accel-Buffering: no&lt;/code&gt; 来绕过这一限制，实现数据的直连传输&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
